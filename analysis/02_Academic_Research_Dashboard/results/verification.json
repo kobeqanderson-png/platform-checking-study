@@ -1,0 +1,74 @@
+{
+  "animal_caches": 91,
+  "source_hashes_verified": 91,
+  "paired_animals": 29,
+  "local_asset_links_verified": 45,
+  "legacy_sp1_labels": "correct",
+  "unit_tests": "Run test_tracking_qc.py separately; six regression tests",
+  "videos": [
+    {
+      "file": "leave_vs_stay_sp1.mp4",
+      "frames": 1200,
+      "fps": 40.0,
+      "seconds": 30.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "head_turning_sp1.mp4",
+      "frames": 200,
+      "fps": 10.0,
+      "seconds": 20.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "leave_vs_stay_kac_d6.mp4",
+      "frames": 900,
+      "fps": 30.0,
+      "seconds": 30.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "head_turning_kac_d6.mp4",
+      "frames": 600,
+      "fps": 30.0,
+      "seconds": 20.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "leave_vs_stay_kac_d8.mp4",
+      "frames": 900,
+      "fps": 30.0,
+      "seconds": 30.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "head_turning_kac_d8.mp4",
+      "frames": 600,
+      "fps": 30.0,
+      "seconds": 20.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "tail_sweeping_sp1.mp4",
+      "frames": 200,
+      "fps": 10.0,
+      "seconds": 20.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "artifact_kac_d8_rat28.mp4",
+      "frames": 300,
+      "fps": 30.0,
+      "seconds": 10.0,
+      "full_decode": "passed"
+    },
+    {
+      "file": "artifact_kac_d6_rat22.mp4",
+      "frames": 300,
+      "fps": 30.0,
+      "seconds": 10.0,
+      "full_decode": "passed"
+    }
+  ],
+  "visual_review": "15 figure images and sampled frames from every demo reviewed; no exhaustive behavioral annotation"
+}

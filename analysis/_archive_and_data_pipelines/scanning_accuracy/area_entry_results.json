@@ -1,0 +1,41 @@
+[
+  {
+    "cond": "kac_d6",
+    "animals": 10,
+    "complete_paths": 15,
+    "successful_paths": 10,
+    "previous_successes": 9,
+    "added_visits": 1,
+    "successful_paths_supported_only_by_interpolation": 0,
+    "rho_success_count": 0.49543369430686224,
+    "rho_success_pct": 0.06168870908644987,
+    "incomplete_segments": 23,
+    "incomplete_segments_with_observed_entry": 13
+  },
+  {
+    "cond": "kac_d8",
+    "animals": 10,
+    "complete_paths": 23,
+    "successful_paths": 16,
+    "previous_successes": 14,
+    "added_visits": 2,
+    "successful_paths_supported_only_by_interpolation": 0,
+    "rho_success_count": 0.6359459499326667,
+    "rho_success_pct": -0.2909286827258562,
+    "incomplete_segments": 45,
+    "incomplete_segments_with_observed_entry": 21
+  },
+  {
+    "cond": "sp1",
+    "animals": 12,
+    "complete_paths": 24,
+    "successful_paths": 14,
+    "previous_successes": 13,
+    "added_visits": 1,
+    "successful_paths_supported_only_by_interpolation": 0,
+    "rho_success_count": -0.1470795974839623,
+    "rho_success_pct": -0.45228382320681093,
+    "incomplete_segments": 16,
+    "incomplete_segments_with_observed_entry": 7
+  }
+]

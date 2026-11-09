@@ -1,0 +1,9 @@
+leave_vs_stay_sp1 1200 frames
+head_turning_sp1 200 frames
+leave_vs_stay_kac_d6 900 frames
+head_turning_kac_d6 600 frames
+leave_vs_stay_kac_d8 900 frames
+head_turning_kac_d8 600 frames
+tail_sweeping_sp1 200 frames
+artifact_kac_d8_rat28 300 frames
+artifact_kac_d6_rat22 300 frames

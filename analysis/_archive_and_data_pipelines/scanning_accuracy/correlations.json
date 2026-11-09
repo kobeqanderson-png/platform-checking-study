@@ -1,0 +1,218 @@
+[
+  {
+    "cond": "kac_d6",
+    "group": "F",
+    "predictor": "scanning_deg_s",
+    "outcome": "heading_error_deg",
+    "n": 4,
+    "rho": 0.39999999999999997,
+    "p": 0.74965
+  },
+  {
+    "cond": "kac_d6",
+    "group": "F",
+    "predictor": "scanning_deg_s",
+    "outcome": "progress_per_path",
+    "n": 4,
+    "rho": 0.0,
+    "p": 1.0
+  },
+  {
+    "cond": "kac_d6",
+    "group": "F",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "heading_error_deg",
+    "n": 4,
+    "rho": 0.8944271909999159,
+    "p": 0.33765
+  },
+  {
+    "cond": "kac_d6",
+    "group": "F",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "progress_per_path",
+    "n": 4,
+    "rho": -0.8944271909999159,
+    "p": 0.33765
+  },
+  {
+    "cond": "kac_d6",
+    "group": "all",
+    "predictor": "scanning_deg_s",
+    "outcome": "heading_error_deg",
+    "n": 6,
+    "rho": 0.6,
+    "p": 0.2432
+  },
+  {
+    "cond": "kac_d6",
+    "group": "all",
+    "predictor": "scanning_deg_s",
+    "outcome": "progress_per_path",
+    "n": 6,
+    "rho": -0.3714285714285715,
+    "p": 0.4966
+  },
+  {
+    "cond": "kac_d6",
+    "group": "all",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "heading_error_deg",
+    "n": 6,
+    "rho": 0.8332380897952965,
+    "p": 0.06765
+  },
+  {
+    "cond": "kac_d6",
+    "group": "all",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "progress_per_path",
+    "n": 6,
+    "rho": -0.9258200997725515,
+    "p": 0.0338
+  },
+  {
+    "cond": "kac_d8",
+    "group": "F",
+    "predictor": "scanning_deg_s",
+    "outcome": "heading_error_deg",
+    "n": 7,
+    "rho": 0.03571428571428572,
+    "p": 0.96245
+  },
+  {
+    "cond": "kac_d8",
+    "group": "F",
+    "predictor": "scanning_deg_s",
+    "outcome": "progress_per_path",
+    "n": 7,
+    "rho": -0.6071428571428572,
+    "p": 0.1638
+  },
+  {
+    "cond": "kac_d8",
+    "group": "F",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "heading_error_deg",
+    "n": 7,
+    "rho": 0.1454785934906616,
+    "p": 0.7594
+  },
+  {
+    "cond": "kac_d8",
+    "group": "F",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "progress_per_path",
+    "n": 7,
+    "rho": -0.7092081432669753,
+    "p": 0.0846
+  },
+  {
+    "cond": "kac_d8",
+    "group": "all",
+    "predictor": "scanning_deg_s",
+    "outcome": "heading_error_deg",
+    "n": 9,
+    "rho": 0.016666666666666666,
+    "p": 0.98065
+  },
+  {
+    "cond": "kac_d8",
+    "group": "all",
+    "predictor": "scanning_deg_s",
+    "outcome": "progress_per_path",
+    "n": 9,
+    "rho": -0.5,
+    "p": 0.1817
+  },
+  {
+    "cond": "kac_d8",
+    "group": "all",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "heading_error_deg",
+    "n": 9,
+    "rho": 0.025537695922762456,
+    "p": 0.95505
+  },
+  {
+    "cond": "kac_d8",
+    "group": "all",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "progress_per_path",
+    "n": 9,
+    "rho": -0.4767036572248992,
+    "p": 0.1961
+  },
+  {
+    "cond": "sp1",
+    "group": "F",
+    "predictor": "scanning_deg_s",
+    "outcome": "heading_error_deg",
+    "n": 10,
+    "rho": 0.28484848484848485,
+    "p": 0.42185
+  },
+  {
+    "cond": "sp1",
+    "group": "F",
+    "predictor": "scanning_deg_s",
+    "outcome": "progress_per_path",
+    "n": 10,
+    "rho": 0.06666666666666665,
+    "p": 0.86305
+  },
+  {
+    "cond": "sp1",
+    "group": "F",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "heading_error_deg",
+    "n": 10,
+    "rho": 0.21745842891752112,
+    "p": 0.5558
+  },
+  {
+    "cond": "sp1",
+    "group": "F",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "progress_per_path",
+    "n": 10,
+    "rho": -0.21745842891752112,
+    "p": 0.55635
+  },
+  {
+    "cond": "sp1",
+    "group": "all",
+    "predictor": "scanning_deg_s",
+    "outcome": "heading_error_deg",
+    "n": 13,
+    "rho": 0.13186813186813187,
+    "p": 0.67175
+  },
+  {
+    "cond": "sp1",
+    "group": "all",
+    "predictor": "scanning_deg_s",
+    "outcome": "progress_per_path",
+    "n": 13,
+    "rho": -0.016483516483516484,
+    "p": 0.96255
+  },
+  {
+    "cond": "sp1",
+    "group": "all",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "heading_error_deg",
+    "n": 13,
+    "rho": 0.14547859349066156,
+    "p": 0.63375
+  },
+  {
+    "cond": "sp1",
+    "group": "all",
+    "predictor": "head_sweeps_per_valid_min",
+    "outcome": "progress_per_path",
+    "n": 13,
+    "rho": -0.15107392400953318,
+    "p": 0.62005
+  }
+]

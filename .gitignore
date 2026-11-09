@@ -1,0 +1,32 @@
+# Large video archives & raw capture folders
+d3 videos/
+d4 videos/
+d5 videos/
+d6 videos/
+d7 videos/
+
+# Exclude large raw videos except the trimmed web demo clips
+*.mp4
+!analysis/**/demos_trimmed/*.mp4
+
+# Exclude large training zip bundles
+training_packages/
+*.zip
+!analysis/**/platform_checking_site.zip
+!analysis/**/return_portal_source.zip
+
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# System & Deployment
+.DS_Store
+Thumbs.db
+.vercel/
+.env
+.env.local

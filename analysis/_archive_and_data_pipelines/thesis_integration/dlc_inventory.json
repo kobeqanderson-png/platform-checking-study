@@ -1,0 +1,259 @@
+[
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\sp1\\evaluation-results-pytorch\\iteration-0\\sp1DLC_allworklists20261106-trainset95shuffle1",
+    "count": 1,
+    "models": {
+      "best-150": 1
+    },
+    "files": [
+      "DLC_Resnet50_sp1DLC_allworklists20261106shuffle1_snapshot_best-150.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\sp1\\evaluation-results-pytorch\\iteration-0\\sp1DLC_allworklists20261106-trainset95shuffle2",
+    "count": 1,
+    "models": {
+      "best-190": 1
+    },
+    "files": [
+      "DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\sp1\\demo_results",
+    "count": 2,
+    "models": {
+      "best-150": 2
+    },
+    "files": [
+      "d8_test23_rat25DLC_Resnet50_sp1DLC_allworklists20261106shuffle1_snapshot_best-150.h5",
+      "sp1d1_test100DLC_Resnet50_sp1DLC_allworklists20261106shuffle1_snapshot_best-150.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\sp1\\demo_compare",
+    "count": 4,
+    "models": {
+      "best-150": 2,
+      "best-190": 2
+    },
+    "files": [
+      "shuffle1_d8_test23_rat25DLC_Resnet50_sp1DLC_allworklists20261106shuffle1_snapshot_best-150.h5",
+      "shuffle2_sp1d1_test100DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "shuffle2_d8_test23_rat25DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "shuffle1_sp1d1_test100DLC_Resnet50_sp1DLC_allworklists20261106shuffle1_snapshot_best-150.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\sp1\\d8_filled_shuffle2",
+    "count": 5,
+    "models": {
+      "best-190": 5
+    },
+    "files": [
+      "Test_1DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "Test_2DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "Test_3DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "Test_4DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "Test_5DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\sp1\\sp1_tracks",
+    "count": 32,
+    "models": {
+      "best-190": 32
+    },
+    "files": [
+      "sp1_check_Test_1DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_2DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_3DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_4DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_6DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_5DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_7DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_8DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_9DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_10DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_11DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_12DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_13DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_14DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_15DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_16DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_18DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_17DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_20DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_21DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_19DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_22DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_24DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_23DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_25DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_26DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_27DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_28DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_29DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_30DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_31DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5",
+      "sp1_check_Test_32DLC_Resnet50_sp1DLC_allworklists20261106shuffle2_snapshot_best-190.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\KAcheck_d6d8_20261107 (1)\\evaluation-results-pytorch\\iteration-0\\KAcheck_d6d820261107-trainset85shuffle1",
+    "count": 1,
+    "models": {
+      "best-400": 1
+    },
+    "files": [
+      "DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\KAcheck_d6d8_20261107 (1)\\d8_tracks",
+    "count": 30,
+    "models": {
+      "best-400": 30
+    },
+    "files": [
+      "Test_1DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_2DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_3DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_4DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_5DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_6DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_7DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_8DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_9DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_10DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_11DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_12DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_13DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_14DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_15DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_16DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_17DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_18DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_19DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_20DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_21DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_22DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_23DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_24DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_25DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_26DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_27DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_28DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_29DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Test_30DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\KAcheck_d6d8_20261107 (1)\\d6_tracks",
+    "count": 12,
+    "models": {
+      "best-400": 12
+    },
+    "files": [
+      "Day06_Checking_1p5cm_Rat02DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat03DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat04DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat05DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat06DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat07DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat08DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat09DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat10DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat12DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat13DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5",
+      "Day06_Checking_1p5cm_Rat14DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-400.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\KAcheck_d6d8_v2_20261107 (1)\\evaluation-results-pytorch\\iteration-0\\KAcheck_d6d820261107-trainset85shuffle1",
+    "count": 1,
+    "models": {
+      "best-240": 1
+    },
+    "files": [
+      "DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\KAcheck_d6d8_v2_20261107 (1)\\d8_tracks",
+    "count": 30,
+    "models": {
+      "best-240": 30
+    },
+    "files": [
+      "Test_1DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_2DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_3DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_4DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_5DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_6DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_7DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_8DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_9DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_10DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_11DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_12DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_13DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_14DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_15DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_16DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_17DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_18DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_19DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_20DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_21DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_22DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_23DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_24DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_25DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_26DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_27DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_28DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_29DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Test_30DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5"
+    ]
+  },
+  {
+    "folder": "G:\\My Drive\\DLC output[sp1--kac1.5cm-3.0cm]\\Colab_Training_Runs\\KAcheck_d6d8_v2_20261107\\d6_tracks",
+    "count": 29,
+    "models": {
+      "best-240": 29
+    },
+    "files": [
+      "Day06_Checking_1p5cm_Rat02DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat03DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat04DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat05DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat06DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat07DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat08DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat09DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat10DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat12DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat13DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat14DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat15DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat16DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat17DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat18DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat20DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat21DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat22DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat23DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat24DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat25DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat26DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat27DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat28DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat29DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat30DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat31DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5",
+      "Day06_Checking_1p5cm_Rat32DLC_Resnet50_KAcheck_d6d820261107shuffle1_snapshot_best-240.h5"
+    ]
+  }
+]

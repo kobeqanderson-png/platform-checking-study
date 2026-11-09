@@ -1,0 +1,14 @@
+file1 = WIN_20261102_10_04_16_Pro.mp4
+pool source px=(833,566,r591) analysis=654x490 duration=1067s
+done frames=10674
+file2 = WIN_20261102_10_27_20_Pro.mp4
+pool source px=(999,502,r711) analysis=652x366 duration=370s
+done frames=3703
+file3 = WIN_20261102_10_45_49_Pro.mp4
+pool source px=(999,502,r711) analysis=652x366 duration=185s
+done frames=1846
+file4 = WIN_20261102_10_49_10_Pro.mp4
+pool source px=(833,566,r591) analysis=654x490 duration=2812s
+done frames=28115
+
+[exited with code 0]

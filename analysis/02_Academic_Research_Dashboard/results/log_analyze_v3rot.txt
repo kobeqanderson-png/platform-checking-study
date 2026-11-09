@@ -1,0 +1,17 @@
+sp1: 32 animals cleaned
+kac_d6: 29 animals cleaned
+kac_d8: 30 animals cleaned
+Platform bounds by cohort and sex:
+             platform_lower_pct  platform_upper_pct  pct_missing
+cond   sex                                                     
+kac_d6 F                 70.97               71.33         0.36
+       M                 98.00               98.00         0.00
+kac_d8 F                 62.77               63.38         0.61
+       M                 97.48               97.48         0.00
+sp1    F                 73.83               73.98         0.15
+       M                 98.41               98.54         0.12
+Paired platform bounds:
+ group  n  day6_lower  day6_upper  day8_lower  day8_upper  change_min  change_max
+  All 29       84.02       84.20       79.44       79.76       -4.77       -4.26
+    M 14       98.00       98.00       97.30       97.30       -0.69       -0.69
+    F 15       70.97       71.33       62.77       63.38       -8.56       -7.59

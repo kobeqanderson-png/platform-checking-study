@@ -1,0 +1,29 @@
+{
+  "url": "https://platform-checking-study-q8svng7mw-kobeqanderson-pngs-projects.vercel.app/profiles.html",
+  "deployment_id": "dpl_9F634pepfQGeagmVbH3Eds6wP4Jb",
+  "environment": "protected preview",
+  "status": "READY",
+  "files_verified": 35,
+  "biological_animals": 62,
+  "checking_sessions": 91,
+  "kac_pairs": 29,
+  "dimensions": 14,
+  "events": 146,
+  "checks": [
+    "source hashes",
+    "native-frame P1 entries",
+    "no duplicate observed return times",
+    "missingness semantics",
+    "six browser correlations matched independent SciPy calculations",
+    "matrix and individual selection",
+    "animal comparison",
+    "KAC/SP1 and sex filters",
+    "trajectory deep link",
+    "paired KAC values",
+    "returns timeline/table",
+    "390px responsive viewport (not a physical phone)",
+    "Downloaded CSV matches validated source export"
+  ],
+  "browser_console_errors": 0,
+  "download_status": "Verified saved animal_profiles.csv: 91 rows, 37 columns"
+}

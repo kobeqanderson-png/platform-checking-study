@@ -1,0 +1,30 @@
+rat,sex,notes_stayed_on,dlc_stayed_on,notes_departures,departures,notes_first_departure_s,first_departure_s,notes_text
+2,M,SOP,SOP,0,0,,,"R 60 s, stayed on"
+3,M,SOP,SOP,0,0,,,"R 1:30, stayed on"
+4,M,LP,LP,,1,40,7.8,"jumped off ~40 s, small lap, got back on"
+5,M,SOP,SOP,0,0,,,"R 1:37, stayed on"
+6,M,SOP,SOP,0,0,,,"R 36 s, stayed on"
+7,M,SOP,SOP,0,0,,,"R halfway, stayed on"
+8,M,SOP,SOP,0,0,,,"submerging front half, R 1:22, stayed on"
+9,M,,LP,,1,,0.7,
+10,M,,SOP,,0,,,
+12,M,,SOP,,0,,,
+13,M,,LP,,1,,73.2,
+14,M,,SOP,,0,,,
+15,M,,SOP,,0,,,
+16,M,,SOP,,0,,,
+17,F,LP,LP,3,2,30,30.9,"R 20 s, left 30 s (x3), thigmotaxis"
+18,F,LP,LP,,3,10,14.3,jumped off ~10 s
+20,F,SOP,SOP,0,0,,,"R 15 s, submerging, stayed on"
+21,F,LP,LP,,2,0,2.5,"left/slipped immediately, found ~1:40"
+22,F,LP,LP,,1,87,86.5,"R 30 s, leaped off 87 s"
+23,F,LP,LP,,2,100,99.3,"R 51 s, left 100 s"
+24,F,LP,LP,,1,13,15.9,"left 13 s, R 71 s"
+25,F,,LP,,4,,13.7,
+26,F,LP,LP,,1,100,85.0,"R 40 s, off 100 s, jump for ledge"
+27,F,,SOP,,0,,,R 57 s
+28,F,LP,LP,2,4,57,56.5,"R 45 s, off 57 s (2x)"
+29,F,SOP,SOP,0,0,,,"R 40 s, stayed on"
+30,F,LP,LP,5,4,20,26.7,"R 11 s, off 20 s (5x), jump for ledge"
+31,F,LP,LP,2,4,30,28.5,off 30 s (2x)
+32,F,LP,LP,2,2,60,58.4,"R 40 s, off 60 s (2x)"

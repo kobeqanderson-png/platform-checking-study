@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Platform Checking Research Suite · Master Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --bg: #070a0f;
+  --bg-subtle: #0d121a;
+  --panel: #111722;
+  --panel-glass: rgba(17, 23, 34, 0.88);
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --panel-border-hover: rgba(255, 255, 255, 0.2);
+
+  --ink: #f8fafc;
+  --ink-secondary: #94a3b8;
+  --ink-muted: #64748b;
+  --rule: rgba(255, 255, 255, 0.08);
+
+  --accent: #2dd4bf;
+  --accent-light: rgba(45, 212, 191, 0.12);
+  --f: #60a5fa;
+  --m: #fb923c;
+  --p1-color: #c084fc;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-subtle: #f0f3f6;
+  --panel: #ffffff;
+  --panel-glass: rgba(255, 255, 255, 0.88);
+  --panel-border: rgba(15, 23, 42, 0.08);
+  --panel-border-hover: rgba(15, 23, 42, 0.18);
+
+  --ink: #0a0f14;
+  --ink-secondary: #4a5568;
+  --ink-muted: #8c9ba5;
+  --rule: rgba(15, 23, 42, 0.08);
+
+  --accent: #0f766e;
+  --accent-light: #f0fdfa;
+  --f: #1d4ed8;
+  --m: #ea580c;
+  --p1-color: #7e22ce;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Nav */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--panel-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--panel-border);
+}
+.nav-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent);
+}
+.brand-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.theme-btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--panel-border);
+  color: var(--ink);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Container */
+.wrap {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 48px 24px 100px;
+  display: grid;
+  gap: 56px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+.editorial-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.marker-line { width: 44px; height: 1px; background: var(--rule); }
+.marker-vol { font-family: var(--font-serif); font-style: italic; font-size: 13px; font-weight: 500; color: var(--ink); }
+.marker-dot { width: 3px; height: 3px; background: var(--ink-muted); border-radius: 50%; }
+.marker-sub { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-secondary); }
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 5.5vw, 54px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-lede {
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+/* TWO MAIN PILLARS */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+@media (max-width: 960px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+}
+
+.pillar-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--panel-border-hover);
+}
+.pillar-card.presentation {
+  border-top: 4px solid var(--accent);
+}
+.pillar-card.academic {
+  border-top: 4px solid var(--f);
+}
+
+.pillar-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+.pillar-card.presentation .pillar-tag {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+.pillar-card.academic .pillar-tag {
+  background: rgba(96, 165, 250, 0.15);
+  color: var(--f);
+}
+
+.pillar-head {
+  display: grid;
+  gap: 12px;
+}
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.15;
+}
+.pillar-sub {
+  font-size: 15px;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+.features-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+}
+.features-list li {
+  font-size: 14px;
+  color: var(--ink-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.features-list li strong {
+  color: var(--ink);
+}
+.feature-bullet {
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+.pillar-card.presentation .feature-bullet { color: var(--accent); }
+.pillar-card.academic .feature-bullet { color: var(--f); }
+
+.launch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+.pillar-card.presentation .launch-btn {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 4px 16px rgba(45, 212, 191, 0.25);
+}
+.pillar-card.presentation .launch-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+.pillar-card.academic .launch-btn {
+  background: var(--f);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.25);
+}
+.pillar-card.academic .launch-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* QUICK TOOL STRIP */
+.quick-tools-section {
+  display: grid;
+  gap: 20px;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.tool-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  text-decoration: none;
+  display: grid;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+.tool-card:hover {
+  border-color: var(--panel-border-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.tool-title {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tool-desc {
+  font-size: 13.5px;
+  color: var(--ink-secondary);
+  line-height: 1.5;
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding-top: 32px;
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <span class="brand-dot"></span>
+      <span class="brand-title">NeuroCheck &middot; Master Research Portal</span>
+    </a>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
+      <span>Theme</span>
+      <span id="themeIcon">☀️</span>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="editorial-marker">
+      <span class="marker-line"></span>
+      <span class="marker-vol">MASTER PORTAL</span>
+      <span class="marker-dot"></span>
+      <span class="marker-sub">TOWSON UNIVERSITY · COMPARATIVE NEUROSCIENCE LABORATORY</span>
+      <span class="marker-line"></span>
+    </div>
+
+    <h1>Platform Checking <em>Research Suite</em></h1>
+
+    <p class="hero-lede">
+      Choose between the high-impact interactive presentation portal for demonstrations and storytelling, or the formal academic suite for advisory committee review, hypothesis testing, and methodology.
+    </p>
+  </header>
+
+  <!-- TWO PRIMARY PILLARS -->
+  <section class="pillars-grid">
+
+    <!-- PILLAR 1: PRESENTATION & SHOWCASE -->
+    <div class="pillar-card presentation">
+      <div class="pillar-head">
+        <span class="pillar-tag">Presentation &middot; Showcase &middot; In-Depth Demo</span>
+        <h2 class="pillar-title">Return &mdash; The Interactive Checking Portal</h2>
+        <p class="pillar-sub">
+          Crafted for high-impact demonstrations, visual storytelling, and interactive parameter exploration. Follow individual animals across water depths, inspect illustrated pool dynamics, and test sensitivity definitions.
+        </p>
+      </div>
+
+      <ul class="features-list">
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>Illustrated Pool & Ambient Sound:</strong> Organic water aesthetic with native 30 Hz and 10 Hz trajectory playback.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>Individual Path Tracing Across Tests:</strong> Direct within-subject comparison linking Day 6 standard, Day 7 reminder, and Day 8 raised depths.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>Interactive Sensitivity Slider:</strong> Dynamically alter the old-goal radius (10–30 cm) and dwell requirements to watch bout counts re-score in real time.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>AK1 30-Animal Measurement Comparison:</strong> Compare passage counts across three center configurations from the original record.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>Neural Hypothesis Architecture:</strong> Visual roadmap connecting behavioral profiles to planned dorsomedial-striatal PV/WFA endpoints.</div>
+        </li>
+      </ul>
+
+      <a href="01_Presentation_Return/Presentation_Return.html" class="launch-btn">
+        <span>Launch "Return" Presentation Portal</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+
+    <!-- PILLAR 2: ACADEMIC & ADVISORY -->
+    <div class="pillar-card academic">
+      <div class="pillar-head">
+        <span class="pillar-tag">Academic &middot; Advisory Committee &middot; Coursework</span>
+        <h2 class="pillar-title">Platform Checking Academic Research Suite</h2>
+        <p class="pillar-sub">
+          Engineered for researchers, thesis advisors, and peer evaluation. Comprehensive statistical hypothesis testing, survival analyses, DeepLabCut rotation-augmented QC, and 10 publication-grade scientific art manifolds.
+        </p>
+      </div>
+
+      <ul class="features-list">
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>Rigorous Hypothesis Testing:</strong> Replicated sex divergence across 3 tests with Fisher's exact tests, Mann-Whitney U, and 10.6&times; Cox hazard ratio.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>DeepLabCut Model QC & Validation:</strong> Less than 1% untracked time across 250,800 frames using rotation-augmented models.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>10 Grand Scientific Art Manifolds:</strong> High-res 300 DPI plates covering chronophotographic skeletons, 3D space-time helices, eigen-postures, and Morlet wavelet sonograms.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>The 60 FPS DeepLabCut Motion Lab:</strong> Interactive 3D WebGL space-time cylinder, live posture phase space ($PC_1$ vs $PC_2$), and multi-rat swarm mode.</div>
+        </li>
+        <li>
+          <span class="feature-bullet">&bull;</span>
+          <div><strong>Cross-Experiment Correlation Suite:</strong> Merged analysis across Elevated Plus Maze, Open Field, and Novel Object Recognition.</div>
+        </li>
+      </ul>
+
+      <a href="02_Academic_Research_Dashboard/Academic_Research_Dashboard.html" class="launch-btn">
+        <span>Open Academic Research Dashboard</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- QUICK ACCESS STRIP -->
+  <section class="quick-tools-section">
+    <h3 class="section-title">Specialized Research Tools &amp; Deep-Dives</h3>
+    <div class="tools-grid">
+      <a href="02_Academic_Research_Dashboard/DeepLabCut_Motion_Lab.html" class="tool-card">
+        <div class="tool-title">
+          <span>DeepLabCut Motion Lab</span>
+          <span>60 FPS &rarr;</span>
+        </div>
+        <p class="tool-desc">
+          Interactive 3D WebGL space-time cylinder, real-time posture phase space attractor, and 5-rat swarm simulation.
+        </p>
+      </a>
+
+      <a href="03_Cross_Experiment_Correlations/Cross_Experiment_Correlations.html" class="tool-card">
+        <div class="tool-title">
+          <span>Cross-Experiment Correlations</span>
+          <span>Matrix &rarr;</span>
+        </div>
+        <p class="tool-desc">
+          Spearman correlation matrices and scatter plots integrating water maze checking with Elevated Plus Maze and Open Field anxiety.
+        </p>
+      </a>
+
+      <a href="05_Behavior_Atlas_Explorer/Behavior_Atlas_Explorer.html" class="tool-card">
+        <div class="tool-title">
+          <span>Behavior Atlas Explorer</span>
+          <span>Atlas &rarr;</span>
+        </div>
+        <p class="tool-desc">
+          Interactive population trajectory maps, vector currents, spatial heatmaps, and excursion classification.
+        </p>
+      </a>
+
+      <a href="04_Individual_Animal_Profiles/Individual_Animal_Profiles.html" class="tool-card">
+        <div class="tool-title">
+          <span>Individual Neurobehavioral Profiles</span>
+          <span>62 Animals &rarr;</span>
+        </div>
+        <p class="tool-desc">
+          Animal-by-animal dossier tracking acquisition curves, scanning rates, first departure latencies, and search patterns.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Platform Checking Research Suite &middot; Laboratory of Comparative Neuroscience &middot; Towson University<br>
+      Kobe Anderson &middot; M.A. Candidate &middot; Advisor: Dr. Bryan Devan &middot; SfN 2026 Archive
+    </p>
+  </footer>
+
+</div>
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const target = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', target);
+  localStorage.setItem('neuro_theme', target);
+  updateThemeIcon(target);
+}
+function updateThemeIcon(theme) {
+  document.getElementById('themeIcon').textContent = theme === 'dark' ? '🌙' : '☀️';
+}
+(function() {
+  const saved = localStorage.getItem('neuro_theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeIcon(saved);
+  }
+})();
+</script>
+
+</body>
+</html>

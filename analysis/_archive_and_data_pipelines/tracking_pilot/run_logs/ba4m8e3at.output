@@ -1,0 +1,8 @@
+file1 = 2026-10-30 10-30-13.mp4
+pool source px=(641,369,r379) analysis=816x458 duration=4785s
+done frames=47854
+file2 = 2026-10-30 12-11-08.mp4
+pool source px=(637,367,r376) analysis=822x462 duration=5076s
+done frames=50764
+
+[exited with code 0]

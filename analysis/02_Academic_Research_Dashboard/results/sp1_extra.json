@@ -1,0 +1,35 @@
+{
+ "p1": {
+  "n": 16,
+  "n_female": 12,
+  "trained_mean": 7.52384372072277,
+  "control_mean": 3.9162566005099,
+  "trained_median": 4.203165255796835,
+  "control_median": 4.160176531671858,
+  "wilcoxon_p": 0.15563546075803855,
+  "closest_trained_median": 6.22367164261418,
+  "closest_control_median": 14.360776313487964,
+  "closest_p": 0.104583740234375,
+  "P1_frac": [
+   0.4623004583813162,
+   -0.062408637900301454
+  ]
+ },
+ "swim_tail": {
+  "n_swimmers": 14,
+  "n_female": 11,
+  "n_male": 3,
+  "female_sweeps_per_s": 1.3312968438486479,
+  "female_amp": 36.66389217187408,
+  "female_tracked": 99.9809813617345,
+  "rudder_r_mean": -0.32228620225134436,
+  "rudder_p": 0.0001220703125,
+  "rudder_n": 14,
+  "speed_r_mean": 0.22269270651620396,
+  "speed_p": 0.0001220703125,
+  "return_n": 12,
+  "return_last3": 100.78930401286395,
+  "return_rest": 85.94258505602527,
+  "return_p": 0.02685546875
+ }
+}

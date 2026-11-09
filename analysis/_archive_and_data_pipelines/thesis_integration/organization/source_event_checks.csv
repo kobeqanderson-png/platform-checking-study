@@ -1,0 +1,4 @@
+cond,rat,sex,segment,start_s,end_s,duration_s,left_known,returned,complete,left_censored,right_censored,reaches_opposite,reaches_wall,opposite_latency_s,wall_latency_s,opposite_s,wall_s,route
+sp1,17,F,1,40.4,51.0,10.6,True,True,True,False,False,True,False,3.0,,5.4,0.0,opposite_only
+sp1,24,F,5,86.3,88.3,2.0,True,True,True,False,False,False,False,,,0.0,0.0,neither
+sp1,4,M,1,102.5,111.8,9.3,True,True,True,False,False,True,False,1.4,,5.4,0.0,opposite_only

@@ -1,0 +1,28 @@
+analysis,contrast,test,result,p,note
+Time to first departure,SP1 raised,"Log-rank, females vs males",chi2 = 12.23,0.0004706280088905279,
+Time to first departure,KAC standard (1.5 cm),"Log-rank, females vs males",chi2 = 8.39,0.0037714257973604504,
+Time to first departure,KAC raised (3 cm),"Log-rank, females vs males",chi2 = 23.88,1.0227491985537185e-06,
+"Cox model, KAC (robust SE by rat)",Female (vs male),Hazard ratio for leaving,HR = 10.55 (95% CI 3.54-31.37),2.2857982613795582e-05,
+"Cox model, KAC (robust SE by rat)",Raised water (vs standard),Hazard ratio for leaving,HR = 1.49 (95% CI 0.85-2.59),0.16029716180331877,
+"Logistic GEE for leaving, KAC",Female (vs male),Odds ratio,OR = 14.75,0.003366671377009158,large OR for sex: few males left
+"Logistic GEE for leaving, KAC",Raised water (vs standard),Odds ratio,OR = 0.57,0.5057458946687761,large OR for sex: few males left
+"Logistic GEE for leaving, KAC",Sex x water level,Odds ratio,OR = 6.17,0.23940777274247627,large OR for sex: few males left
+"Linear mixed model, % on platform, KAC",Female (vs male),Coefficient (percentage points),b = -27.1,1.6142617136273368e-05,
+"Linear mixed model, % on platform, KAC",Raised water (vs standard),Coefficient (percentage points),b = -0.6,0.8560994503620121,
+"Linear mixed model, % on platform, KAC",Sex x water level,Coefficient (percentage points),b = -7.5,0.1280539898570665,
+After leaving (female bouts),SP1 raised,Descriptive,"30 bouts, 90% returned, median 12.2 s off, median max distance 103 cm, 10% reached the wall",,
+After leaving (female bouts),KAC standard (1.5 cm),Descriptive,"30 bouts, 87% returned, median 10.2 s off, median max distance 98 cm, 43% reached the wall",,
+After leaving (female bouts),KAC raised (3 cm),Descriptive,"61 bouts, 93% returned, median 8.7 s off, median max distance 94 cm, 44% reached the wall",,
+"KAC females, day 6 vs day 8 (paired)",Departures,Wilcoxon signed-rank,"2.0 vs 4.0 (median), n = 15",0.002753483783329573,
+"KAC females, day 6 vs day 8 (paired, rats that left both days)",Mean time off per bout (s),Wilcoxon signed-rank,"17.5 vs 11.4 (median), n = 11",0.0244140625,
+"KAC females, day 6 vs day 8 (paired, rats that left both days)",Furthest excursion (cm),Wilcoxon signed-rank,"101.3 vs 104.2 (median), n = 11",0.3203125,
+"KAC females, day 6 vs day 8 (paired, rats that left both days)",Bouts that returned (%),Wilcoxon signed-rank,"100.0 vs 100.0 (median), n = 11",0.875,
+"Training predicts checking? (KAC, Spearman within sex)","Day 5 escape latency (s) vs mean % on platform, females",Spearman,"rho = -0.36, n = 15",0.18848118889773025,
+"Training predicts checking? (KAC, Spearman within sex)","Day 5 escape latency (s) vs mean % on platform, males",Spearman,"rho = -0.01, n = 15",0.9612086095232748,
+"Training predicts checking? (KAC, Spearman within sex)","Swim speed, days 1-5 (cm/s) vs mean % on platform, females",Spearman,"rho = -0.42, n = 15",0.11769939585541632,
+"Training predicts checking? (KAC, Spearman within sex)","Swim speed, days 1-5 (cm/s) vs mean % on platform, males",Spearman,"rho = 0.15, n = 15",0.5905078650107877,
+"Training predicts checking? (KAC, Spearman within sex)","Wall-hugging, days 1-5 (%) vs mean % on platform, females",Spearman,"rho = 0.16, n = 15",0.5671967045803447,
+"Training predicts checking? (KAC, Spearman within sex)","Wall-hugging, days 1-5 (%) vs mean % on platform, males",Spearman,"rho = -0.12, n = 15",0.6603622474836726,
+"Sensitivity of ""females leave more""",SP1 raised,Fisher's exact across 5 zone/bout settings,p range 0.0121-0.0121,0.012113710780017297,
+"Sensitivity of ""females leave more""",KAC standard (1.5 cm),Fisher's exact across 5 zone/bout settings,p range 0.0001-0.0028,0.0028143307087426365,
+"Sensitivity of ""females leave more""",KAC raised (3 cm),Fisher's exact across 5 zone/bout settings,p range 0.0000-0.0000,2.1867291328535937e-05,

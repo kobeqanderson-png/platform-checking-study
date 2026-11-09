@@ -1,0 +1,19 @@
+{
+  "url": "https://platform-checking-study-1qu3wcaqf-kobeqanderson-pngs-projects.vercel.app/explorer.html",
+  "deployment_id": "dpl_Fw8KYjcsHtjeMxXf27rNPztPS68M",
+  "environment": "preview",
+  "files_verified": 26,
+  "browser_checked": [
+    "initial load",
+    "timeline end control",
+    "path color",
+    "spatial maps",
+    "scatter axis selections",
+    "excursion completeness filter",
+    "excursion-to-animal navigation",
+    "cohort and sex filters",
+    "all three figure images loaded"
+  ],
+  "browser_console_errors": 0,
+  "download_verified_records": 91
+}

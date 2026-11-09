@@ -1,0 +1,5 @@
+file1 = 2026-10-31 09-11-48.mp4
+pool source px=(641,370,r378) analysis=818x460 duration=9463s
+done frames=94625
+
+[exited with code 0]

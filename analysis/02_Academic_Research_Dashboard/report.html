@@ -1,0 +1,177 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checking tests — tracking quality review</title><style>
+body{font:17px/1.55 system-ui,sans-serif;background:#f3f5f6;color:#1b2b36;margin:0}main{max-width:1120px;margin:auto;padding:32px 24px 80px}
+h1{font-size:40px;line-height:1.1}h2{margin-top:36px}p{max-width:85ch}img,video{width:100%;height:auto;background:white;border:1px solid #d8dfe3}
+.notice{padding:18px;background:#fff3d8;border-left:5px solid #b67919}table{border-collapse:collapse;font-size:14px;width:100%;background:white}
+th,td{padding:9px;text-align:right;border-bottom:1px solid #ddd}th:first-child,td:first-child{text-align:left}.scroll{overflow:auto}a{color:#17637e}
+section{margin:36px 0}summary{cursor:pointer;font-weight:bold}.small{font-size:14px;color:#52616a}</style><main>
+<p class="small">SP1 and KAC checking tests · November 7, 2026 · local reanalysis</p>
+<h1>Tracking gaps made explicit</h1>
+<div class="notice"><strong>Known artifact locations are masked; missing trajectories remain unresolved.</strong>
+<p>The v2 model sometimes follows an empty rim location rather than the swimming rat. Those frames are masked, and long gaps remain unknown. Swimming distance, wall time, head/tail behaviors, and causal interpretations are not validated poster findings yet.</p></div>
+<p>KAC uses best-240 on both days: 29 Day 6 and 30 Day 8 animals, with 29 pairs (14 males, 15 females). SP1 uses best-190 with test-to-rat mapping from AnyMaze, 16 animals per sex. SP1 sex labels were already confirmed in the earlier handoff.</p>
+<h2>What the platform comparison can support</h2>
+<p>Day 6 females spent 70.9–73.5% of the trial in the platform zone under the missing-time bounds, versus 98.0% for males. Day 8 female bounds widen to 62.7–76.3%, with 13.5% unknown tracking on average. The female change from Day 6 is bounded by −10.8 to +5.3 percentage points; its direction is unresolved under these assumptions.</p>
+<p>These bounds assume retained tracking and short-gap interpolation are correct. They do not cover all tracking errors or sampling uncertainty. The Day 6 to Day 8 comparison also combines water depth with test order and repeat exposure.</p>
+<p>Head and tail sex differences remain in the exploratory calculations. The pulled-back-versus-departure comparison is no longer significant in any cohort after complete-window filtering, removal of duplicate departure events, and correction across three cohorts. This does not prove the behaviors are equivalent; it changes what the present analysis supports.</p>
+<div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Group</th>
+      <th>Pairs</th>
+      <th>D6 lower %</th>
+      <th>D6 upper %</th>
+      <th>D8 lower %</th>
+      <th>D8 upper %</th>
+      <th>Change min (pp)</th>
+      <th>Change max (pp)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All</td>
+      <td>29</td>
+      <td>84.02</td>
+      <td>84.20</td>
+      <td>79.44</td>
+      <td>79.76</td>
+      <td>-4.77</td>
+      <td>-4.26</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>14</td>
+      <td>98.00</td>
+      <td>98.00</td>
+      <td>97.30</td>
+      <td>97.30</td>
+      <td>-0.69</td>
+      <td>-0.69</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>15</td>
+      <td>70.97</td>
+      <td>71.33</td>
+      <td>62.77</td>
+      <td>63.38</td>
+      <td>-8.56</td>
+      <td>-7.59</td>
+    </tr>
+  </tbody>
+</table></div>
+<p>KAC Day 6 · standard: 18/20 explicit stayed/left notes agree; 2 remain unknown. KAC Day 8 · raised: 30/30 explicit stayed/left notes agree; 0 remain unknown.</p>
+<h2>Source-video checks</h2><p>Selected source frames confirm the false rim points. Day 6 rat 4 is already swimming around 8–10 seconds, and rat 26 around 85 seconds. Day 8 rat 13 is on the platform at 65 seconds and swimming around 75–80 seconds. These spot checks do not establish exact departure times or replace the original notes.</p>
+<p>Time zero follows the supplied release markers; these are not all frame-verified. SP1 rat 1 starts with a placement frame showing the hand outside the pool, and placement frames also remain at the start of some KAC clips. Precise first-departure and early head-motion measures remain provisional. Invalid initial tracking is unknown, not a departure.</p>
+<details><summary>Open source-frame contact sheets</summary>
+<p>source_kac_d6_rat04</p><img loading="lazy" src="review/source_kac_d6_rat04.jpg" alt="Source-video tracking audit">
+<p>source_kac_d6_rat22</p><img loading="lazy" src="review/source_kac_d6_rat22.jpg" alt="Source-video tracking audit">
+<p>source_kac_d6_rat26</p><img loading="lazy" src="review/source_kac_d6_rat26.jpg" alt="Source-video tracking audit">
+<p>source_kac_d8_rat13</p><img loading="lazy" src="review/source_kac_d8_rat13.jpg" alt="Source-video tracking audit">
+<p>source_kac_d8_rat22</p><img loading="lazy" src="review/source_kac_d8_rat22.jpg" alt="Source-video tracking audit">
+<p>source_kac_d8_rat28</p><img loading="lazy" src="review/source_kac_d8_rat28.jpg" alt="Source-video tracking audit">
+<p>source_sp1_rat01</p><img loading="lazy" src="review/source_sp1_rat01.jpg" alt="Source-video tracking audit">
+</details>
+<section><h2>Paths after cleaning</h2><img src="figures/01_cleaned_paths.png" alt="Paths after cleaning"><p>Long gaps are not joined. A smooth-looking plot is not proof of accurate tracking; all 91 individual panels are available below.</p><a href="figures/01_cleaned_paths.svg">Editable SVG</a></section>
+<section><h2>Occupancy of tracked time</h2><img src="figures/02_observed_occupancy.png" alt="Occupancy of tracked time"><p>Each rat contributes equal weight. Missing swimming time makes these maps incomplete.</p><a href="figures/02_observed_occupancy.svg">Editable SVG</a></section>
+<section><h2>On, off, and unknown</h2><img src="figures/03_platform_state.png" alt="On, off, and unknown"><p>Unknown frames are neither stayed nor left. Missing stretches cannot create additional departures.</p><a href="figures/03_platform_state.svg">Editable SVG</a></section>
+<section><h2>How much data was lost</h2><img src="figures/04_missingness.png" alt="How much data was lost"><p>Body coverage is reported per animal. Short internal gaps of at most 0.5 seconds may be interpolated; longer gaps stay missing.</p><a href="figures/04_missingness.svg">Editable SVG</a></section>
+<section><h2>The Day 6 control and Day 8 comparison</h2><img src="figures/05_paired_platform_bounds.png" alt="The Day 6 control and Day 8 comparison"><p>These full-trial bounds allow missing time to be either on or off the platform, conditional on retained tracking and short-gap interpolation being correct. They are not statistical confidence intervals and do not include every possible tracking error. Avoid treating observed-only time as an unbiased full-trial estimate.</p><a href="figures/05_paired_platform_bounds.svg">Editable SVG</a></section>
+<section><h2>Head scanning candidates</h2><img src="figures/06_head_scanning.png" alt="Head scanning candidates"><p>Angles restart after gaps. Rates use valid on-platform exposure. These measures are operational definitions, not a validated measure of deliberation.</p><a href="figures/06_head_scanning.svg">Editable SVG</a></section>
+<section><h2>Tail movement and drift candidates</h2><img src="figures/07_tail_drift.png" alt="Tail movement and drift candidates"><p>Circular angle differences avoid false 360-degree turns. Tail motion and drift correlation do not establish which causes the other.</p><a href="figures/07_tail_drift.svg">Editable SVG</a></section>
+<section><h2>Pulled-back peaks versus departures</h2><img src="figures/08_lean_outs.png" alt="Pulled-back peaks versus departures"><p>Each confirmed departure appears once. Events need complete observed pre-event windows; this changes the eligible sample. The three cohort p-values are Holm-corrected.</p><a href="figures/08_lean_outs.svg">Editable SVG</a></section>
+<section><h2>Dependence on the speed cutoff</h2><img src="figures/09_threshold_sensitivity.png" alt="Dependence on the speed cutoff"><p>The 60 cm/s threshold is a QC assumption, tested against 40, 100, and 150 cm/s. False-spot and rim thresholds remain fixed; full threshold validation is still pending.</p><a href="figures/09_threshold_sensitivity.svg">Editable SVG</a></section>
+<h2>Every animal</h2><details><summary>Individual path atlas — 91 animals</summary>
+<img loading="lazy" src="figures/atlas_sp1_M.png" alt="SP1 · raised, M, individual paths">
+<img loading="lazy" src="figures/atlas_sp1_F.png" alt="SP1 · raised, F, individual paths">
+<img loading="lazy" src="figures/atlas_kac_d6_M.png" alt="KAC Day 6 · standard, M, individual paths">
+<img loading="lazy" src="figures/atlas_kac_d6_F.png" alt="KAC Day 6 · standard, F, individual paths">
+<img loading="lazy" src="figures/atlas_kac_d8_M.png" alt="KAC Day 8 · raised, M, individual paths">
+<img loading="lazy" src="figures/atlas_kac_d8_F.png" alt="KAC Day 8 · raised, F, individual paths">
+</details><h2>Video checks</h2><p>White circle: platform zone. Coloured point and trail: cleaned tracking. Red point in artifact examples: original tracking. UNKNOWN is displayed during long gaps; trails stop rather than connecting across them. Female/male examples are selected nearest the within-sex median platform occupancy, early head rotation, or tail-sweep rate, as appropriate; one example does not summarize a group.</p>
+<h3>artifact kac d6 rat22</h3><video src="demos/artifact_kac_d6_rat22.mp4" controls preload="metadata"></video>
+<h3>artifact kac d8 rat28</h3><video src="demos/artifact_kac_d8_rat28.mp4" controls preload="metadata"></video>
+<h3>departure to P1</h3><video src="demos/departure_to_P1.mp4" controls preload="metadata"></video>
+<h3>departure to wall</h3><video src="demos/departure_to_wall.mp4" controls preload="metadata"></video>
+<h3>departure wander</h3><video src="demos/departure_wander.mp4" controls preload="metadata"></video>
+<h3>head turning kac d6</h3><video src="demos/head_turning_kac_d6.mp4" controls preload="metadata"></video>
+<h3>head turning kac d8</h3><video src="demos/head_turning_kac_d8.mp4" controls preload="metadata"></video>
+<h3>head turning sp1</h3><video src="demos/head_turning_sp1.mp4" controls preload="metadata"></video>
+<h3>Typical female and male trial kac d6</h3><video src="demos/leave_vs_stay_kac_d6.mp4" controls preload="metadata"></video>
+<h3>Typical female and male trial kac d8</h3><video src="demos/leave_vs_stay_kac_d8.mp4" controls preload="metadata"></video>
+<h3>Typical female and male trial sp1</h3><video src="demos/leave_vs_stay_sp1.mp4" controls preload="metadata"></video>
+<h3>swim tail sp1</h3><video src="demos/swim_tail_sp1.mp4" controls preload="metadata"></video>
+<h3>tail sweeping sp1</h3><video src="demos/tail_sweeping_sp1.mp4" controls preload="metadata"></video>
+<h2>Coverage</h2><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>cond</th>
+      <th>sex</th>
+      <th>pct_missing</th>
+      <th>pct_interpolated</th>
+      <th>head_exposure_s</th>
+      <th>tail_exposure_s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>kac_d6</td>
+      <td>F</td>
+      <td>0.36</td>
+      <td>3.43</td>
+      <td>83.63</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>kac_d6</td>
+      <td>M</td>
+      <td>0.00</td>
+      <td>0.13</td>
+      <td>114.31</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>kac_d8</td>
+      <td>F</td>
+      <td>0.61</td>
+      <td>4.86</td>
+      <td>75.14</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>kac_d8</td>
+      <td>M</td>
+      <td>0.00</td>
+      <td>0.18</td>
+      <td>116.58</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>sp1</td>
+      <td>F</td>
+      <td>0.15</td>
+      <td>2.18</td>
+      <td>88.39</td>
+      <td>88.49</td>
+    </tr>
+    <tr>
+      <td>sp1</td>
+      <td>M</td>
+      <td>0.12</td>
+      <td>0.07</td>
+      <td>117.88</td>
+      <td>118.06</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2>Method and remaining limits</h2><ul>
+<li>Body: mid-spine, head-center fallback below confidence 0.3. One shared artifact mask invalidates body, head and tail together.</li>
+<li>Mask body points within 40 pixels of the documented false spot, beyond 0.98 of outer pool radius, or either side of a smoothed-body speed jump above 60 cm/s. These geometry and speed thresholds may remove some genuine edge movement.</li>
+<li>Interpolate whole internal gaps only when at most 0.5 seconds; no partial filling of longer gaps, no edge filling. Smoothing and angle derivatives do not bridge long gaps.</li>
+<li>Platform zone: 0.165 pool radii. Departure: at least one second of observed off-platform frames. Missing onset intervals are labelled; departure counts are observed lower bounds when data are missing.</li>
+<li>Head confidence 0.6; tail confidence 0.5. Rates use eligible observed time, not the full trial. Head sweeps are at least 30 degrees, tail sweeps at least 20 degrees; alternating head sweeps within two seconds are labelled VTE-like candidates only.</li>
+<li>Head and tail exposure differs by sex. Rate normalization does not guarantee that missing observations are unbiased. Individual retained segments, posture labels, and behavioral event definitions still need manual validation.</li>
+<li>SP1 linear distances assume the KAC 172-cm pool diameter. Percentages and angles do not require that assumption.</li>
+<li>Next: recover KAC swimming tracks (first-model rerun or additional labeling), validate representative head/tail/lean-out events manually, confirm SP1 release alignment, and then reassess the poster claims. Day 7 remains untracked; AK1 remains out of scope.</li>
+</ul><p class="small">Original dlc_story numerical outputs are preserved. All 15 figure images were visually inspected; sampled frames from each of the nine videos were inspected and the complete video files were decoded for integrity. This is not frame-by-frame behavioral annotation. This report replaces none of the raw videos or tracking files and is not published externally.</p>
+<p><a href="results/per_rat_measures.csv">Per-rat results</a> · <a href="results/notes_validation.csv">Notes comparison</a> · <a href="results/provenance.csv">Input provenance</a> · <a href="results/sex_statistics.csv">Exploratory sex comparisons</a> · <a href="results/method.json">Method settings</a></p></main></html>

@@ -1,0 +1,10 @@
+{
+  "min_off_s": 1,
+  "min_return_s": 1,
+  "min_destination_s": 0.5,
+  "wall_radius_fraction": 0.85,
+  "quadrant": "Both camera-coordinate signs opposite placement relative to pool center; broad proxy, not former-platform ROI",
+  "gaps": "Split and censor; never bridge unknown tracking. Counts of segments are not departure counts.",
+  "complete": "Observed off onset preceded by on within contiguous valid segment, followed by >=1 second on before a gap/end",
+  "bias": "Complete-excursion summaries preferentially exclude difficult swims; pooled excursions are not independent animals."
+}

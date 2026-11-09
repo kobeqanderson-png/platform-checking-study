@@ -1,0 +1,24 @@
+{
+  "id": "dpl_FbCKph2Q4RbWy3TVT4xkTndjxjLe",
+  "url": "https://platform-checking-study-2nq09h1mj-kobeqanderson-pngs-projects.vercel.app/portal.html",
+  "projectId": "prj_m16ZwtaIdOdZKMUEhc1f6kK95YHY",
+  "teamId": "team_yOXnegwv9cUsXspg1lkVBdnE",
+  "readyState": "READY",
+  "target": null,
+  "audience": "Existing Vercel protection retained; no public alias or bypass link",
+  "audienceNote": "The audience field records the deployment workflow. User subsequently clarified the app is public; do not treat it as a current privacy assurance.",
+  "userReportedCurrentAppAudience": "public",
+  "subsequentProjectAccessCheck": "SSO enabled: all_except_custom_domains; password protection disabled. Specific preview access may differ from the public app/domain. No settings changed.",
+  "fileCount": 138,
+  "totalBytes": 23760952,
+  "hashVerification": {
+    "returned": 138,
+    "expected": 138,
+    "mismatches": []
+  },
+  "browser": "Authenticated Chrome; desktop and 390x844 viewport; no console errors; native-frame CSV downloads verified",
+  "physicalPhoneTest": false,
+  "geometry": "Overhead 2D; exact calibration pending",
+  "nativeFrames": 250800,
+  "numericalCases": 819
+}

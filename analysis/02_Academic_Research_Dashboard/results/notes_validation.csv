@@ -1,0 +1,60 @@
+cond,rat,notes_stayed_on,cleaned_class,known_note,agreement,notes_first_s,first_departure_s,first_off_lower_s,first_off_upper_s,pct_missing,notes_text
+kac_d6,2,SOP,SOP,True,1.0,,,,,0.0,"R 60 s, stayed on"
+kac_d6,3,SOP,SOP,True,1.0,,,,,0.0,"R 1:30, stayed on"
+kac_d6,4,LP,LP,True,1.0,40,7.833333333333333,7.833333333333333,7.833333333333333,0.0,"jumped off ~40 s, small lap, got back on"
+kac_d6,5,SOP,SOP,True,1.0,,,,,0.0,"R 1:37, stayed on"
+kac_d6,6,SOP,SOP,True,1.0,,,,,0.0,"R 36 s, stayed on"
+kac_d6,7,SOP,SOP,True,1.0,,,,,0.0,"R halfway, stayed on"
+kac_d6,8,SOP,SOP,True,1.0,,,,,0.0,"submerging front half, R 1:22, stayed on"
+kac_d6,9,,LP,False,,,0.7,0.7,0.7,0.0,
+kac_d6,10,,SOP,False,,,,,,0.0,
+kac_d6,12,,SOP,False,,,,,,0.0,
+kac_d6,13,,LP,False,,,73.23333333333333,73.23333333333333,73.23333333333333,0.0,
+kac_d6,14,,SOP,False,,,,,,0.0,
+kac_d6,15,,SOP,False,,,,,,0.0,
+kac_d6,16,,SOP,False,,,,,,0.0,
+kac_d6,17,LP,LP,True,1.0,30,,30.8,31.066666666666666,0.2222222222222222,"R 20 s, left 30 s (x3), thigmotaxis"
+kac_d6,18,LP,LP,True,1.0,10,14.266666666666667,14.266666666666667,14.266666666666667,0.5,jumped off ~10 s
+kac_d6,20,SOP,unknown,True,0.0,,,,,0.2777777777777778,"R 15 s, submerging, stayed on"
+kac_d6,21,LP,LP,True,1.0,0,2.533333333333333,2.533333333333333,2.533333333333333,0.16666666666666669,"left/slipped immediately, found ~1:40"
+kac_d6,22,LP,LP,True,1.0,87,,86.36666666666666,86.7,0.8055555555555556,"R 30 s, leaped off 87 s"
+kac_d6,23,LP,LP,True,1.0,100,99.3,99.3,99.3,0.0,"R 51 s, left 100 s"
+kac_d6,24,LP,LP,True,1.0,13,15.9,15.9,15.9,0.0,"left 13 s, R 71 s"
+kac_d6,25,,LP,False,,,,13.666666666666666,13.666666666666666,0.4444444444444444,
+kac_d6,26,LP,LP,True,1.0,100,,84.86666666666666,85.93333333333334,0.4166666666666667,"R 40 s, off 100 s, jump for ledge"
+kac_d6,27,,SOP,False,,,,,,0.0,R 57 s
+kac_d6,28,LP,LP,True,1.0,57,56.5,56.5,56.5,0.0,"R 45 s, off 57 s (2x)"
+kac_d6,29,SOP,unknown,True,0.0,,,,,0.1388888888888889,"R 40 s, stayed on"
+kac_d6,30,LP,LP,True,1.0,20,,26.733333333333334,26.733333333333334,0.4166666666666667,"R 11 s, off 20 s (5x), jump for ledge"
+kac_d6,31,LP,LP,True,1.0,30,,28.466666666666665,28.466666666666665,0.3611111111111111,off 30 s (2x)
+kac_d6,32,LP,LP,True,1.0,60,,58.266666666666666,58.8,1.6944444444444446,"R 40 s, off 60 s (2x)"
+kac_d8,1,SOP,SOP,True,1.0,,,,,0.0,R 27 s
+kac_d8,2,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,3,LP,LP,True,1.0,,86.7,86.7,86.7,0.0,left platform
+kac_d8,4,SOP,SOP,True,1.0,,,,,0.0,R 55 s
+kac_d8,5,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,6,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,7,SOP,SOP,True,1.0,,,,,0.0,R 42 s
+kac_d8,8,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,9,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,10,SOP,SOP,True,1.0,,,,,0.0,R 13 s
+kac_d8,12,SOP,SOP,True,1.0,,,,,0.0,R 29 s
+kac_d8,13,LP,LP,True,1.0,65,75.33333333333333,75.33333333333333,75.33333333333333,0.0,"left 65 s, back 87 s"
+kac_d8,14,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,15,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,16,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,17,LP,LP,True,1.0,,8.633333333333333,8.633333333333333,8.633333333333333,2.2222222222222223,left and returned
+kac_d8,18,LP,LP,True,1.0,10,,10.333333333333334,10.666666666666666,1.1666666666666667,left 6 times
+kac_d8,20,LP,LP,True,1.0,95,96.1,96.1,96.1,0.2222222222222222,left 95 s
+kac_d8,21,LP,LP,True,1.0,0,0.3333333333333333,0.3333333333333333,0.3333333333333333,2.166666666666667,left immediately
+kac_d8,22,LP,LP,True,1.0,,,59.166666666666664,59.56666666666667,1.0,left; found platform
+kac_d8,23,LP,LP,True,1.0,49,51.06666666666667,51.06666666666667,51.06666666666667,0.0,"left 49 s, 78 s"
+kac_d8,24,LP,LP,True,1.0,73,74.36666666666666,74.36666666666666,74.36666666666666,0.2222222222222222,left 73 s
+kac_d8,25,LP,LP,True,1.0,5,2.066666666666667,2.066666666666667,2.066666666666667,0.08333333333333334,left x7
+kac_d8,26,SOP,SOP,True,1.0,,,,,0.0,
+kac_d8,27,LP,LP,True,1.0,90,88.9,88.9,88.9,0.1388888888888889,left 90 s
+kac_d8,28,LP,LP,True,1.0,7,8.266666666666667,8.266666666666667,8.266666666666667,0.4166666666666667,left x5 (?)
+kac_d8,29,LP,LP,True,1.0,0,0.7,0.7,0.7,0.0,left right away
+kac_d8,30,LP,LP,True,1.0,0,6.4,6.4,6.4,0.0,left x3
+kac_d8,31,LP,LP,True,1.0,0,3.8,3.8,3.8,0.19444444444444445,left x3
+kac_d8,32,LP,LP,True,1.0,0,,6.5,6.9,1.3333333333333335,left x4

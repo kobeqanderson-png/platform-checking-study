@@ -1,0 +1,4 @@
+measure,frames,median_abs_error,p90_abs_error,true_spread_sd,r
+tail_angle_deg,36,6.044,11.03,20.284,0.923
+hip_offset_BL,36,0.044,0.079,0.119,0.857
+head_yaw_deg,36,5.102,13.359,12.417,0.85

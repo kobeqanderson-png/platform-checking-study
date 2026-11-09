@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cross-Experiment Correlations · Water Maze × Exploration &amp; Anxiety</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* === EDITORIAL DESIGN SYSTEM === */
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Editorial Light Palette */
+  --bg: #f7f9fa;
+  --bg-subtle: #f0f3f6;
+  --panel: #ffffff;
+  --panel-glass: rgba(255, 255, 255, 0.88);
+  --panel-border: rgba(15, 23, 42, 0.08);
+  --panel-border-hover: rgba(15, 23, 42, 0.16);
+
+  --ink: #0a0f14;
+  --ink-secondary: #4a5568;
+  --ink-muted: #8c9ba5;
+  --rule: rgba(15, 23, 42, 0.08);
+
+  /* Scientific Accents */
+  --accent: #0f766e;
+  --accent-light: #f0fdfa;
+  --accent-glow: rgba(15, 118, 110, 0.12);
+  --f: #1d4ed8;            /* Females: Crisp Sapphire */
+  --f-soft: rgba(29, 78, 216, 0.08);
+  --m: #ea580c;            /* Males: Terracotta Amber */
+  --m-soft: rgba(234, 88, 12, 0.08);
+
+  --sig-color: #0f766e;
+  --sig-bg: #ccfbf1;
+  --ns-color: #64748b;
+  --ns-bg: #f1f5f9;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.08);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+[data-theme="dark"] {
+  --bg: #090d12;
+  --bg-subtle: #0f151e;
+  --panel: #131922;
+  --panel-glass: rgba(19, 25, 34, 0.88);
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --panel-border-hover: rgba(255, 255, 255, 0.18);
+
+  --ink: #f8fafc;
+  --ink-secondary: #94a3b8;
+  --ink-muted: #64748b;
+  --rule: rgba(255, 255, 255, 0.08);
+
+  --accent: #2dd4bf;
+  --accent-light: rgba(45, 212, 191, 0.12);
+  --accent-glow: rgba(45, 212, 191, 0.18);
+  --f: #60a5fa;
+  --f-soft: rgba(96, 165, 250, 0.12);
+  --m: #fb923c;
+  --m-soft: rgba(251, 146, 60, 0.12);
+
+  --sig-color: #2dd4bf;
+  --sig-bg: rgba(45, 212, 191, 0.16);
+  --ns-color: #94a3b8;
+  --ns-bg: rgba(255, 255, 255, 0.06);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Top Sticky Editorial Nav */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--panel-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--panel-border);
+}
+.nav-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand-dot {
+  width: 9px;
+  height: 9px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+}
+.brand-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: var(--accent);
+}
+.theme-btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--panel-border);
+  color: var(--ink);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Wrap */
+.wrap {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+  display: grid;
+  gap: 52px;
+}
+
+/* Editorial Marker */
+.editorial-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  user-select: none;
+}
+.marker-line { width: 44px; height: 1px; background: var(--rule); }
+.marker-vol { font-family: var(--font-serif); font-style: italic; font-size: 13px; font-weight: 500; color: var(--ink); }
+.marker-dot { width: 3px; height: 3px; background: var(--ink-muted); border-radius: 50%; }
+.marker-sub { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-secondary); }
+.marker-badge {
+  font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; background: var(--accent-light); color: var(--accent); padding: 2px 8px; border-radius: 4px;
+}
+
+/* Header */
+.hero {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 5.5vw, 56px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-lede {
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+.f-text { color: var(--f); font-weight: 600; }
+.m-text { color: var(--m); font-weight: 600; }
+
+/* KPI Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.kpi-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  display: grid;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.kpi-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: var(--accent);
+}
+.kpi-lab {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+.kpi-val {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink);
+}
+.kpi-cap {
+  font-size: 13px;
+  color: var(--ink-secondary);
+}
+
+/* Section Heads */
+.section-head {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background: var(--accent);
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 500;
+  color: var(--ink);
+}
+.section-desc {
+  font-size: 15px;
+  color: var(--ink-secondary);
+  max-width: 820px;
+}
+
+/* Two Card Layout */
+.two-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+}
+.editorial-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  display: grid;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.editorial-card h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.editorial-card ul {
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+}
+.editorial-card strong {
+  color: var(--ink);
+}
+.sig-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+/* Heatmap Section */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 8px;
+}
+.tab {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  color: var(--ink-secondary);
+  cursor: pointer;
+  border: 1px solid var(--panel-border);
+  transition: all 0.2s ease;
+}
+.tab.active {
+  background: var(--ink);
+  color: var(--panel);
+  border-color: var(--ink);
+}
+[data-theme="dark"] .tab.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+.tab-content {
+  display: none;
+  background: #ffffff;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.tab-content.active {
+  display: block;
+}
+.tab-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+.tab-content figcaption {
+  padding: 12px 6px 4px;
+  font-size: 14px;
+  color: var(--ink-secondary);
+}
+
+/* Scatter Grid */
+.scatter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+}
+.scatter-fig {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+.scatter-fig .img {
+  background: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid var(--panel-border);
+}
+.scatter-fig img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.scatter-fig figcaption {
+  padding: 12px 16px;
+  font-size: 13.5px;
+  color: var(--ink-secondary);
+  line-height: 1.45;
+}
+.scatter-fig figcaption b {
+  color: var(--ink);
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Tables */
+.tbl-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-wrap-fixed {
+  max-height: 540px;
+  overflow-y: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  min-width: 800px;
+}
+thead th {
+  background: var(--bg-subtle);
+  border-bottom: 2px solid var(--panel-border);
+  padding: 12px 14px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  cursor: pointer;
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+thead th:hover {
+  color: var(--accent);
+}
+.sort-arrow { margin-left: 4px; opacity: 0.4; font-size: 9px; }
+thead th.sorted-asc .sort-arrow::after { content: "▲"; opacity: 1; }
+thead th.sorted-desc .sort-arrow::after { content: "▼"; opacity: 1; }
+thead th:not(.sorted-asc):not(.sorted-desc) .sort-arrow::after { content: "▲▼"; }
+
+tbody th, tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 14px;
+  white-space: nowrap;
+}
+tbody tr:hover {
+  background: var(--bg-subtle);
+}
+.sex-m { color: var(--m); font-weight: 600; }
+.sex-f { color: var(--f); font-weight: 600; }
+
+/* Filter Controls */
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.filter-row label {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-secondary);
+}
+.filter-row select, .filter-row input {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+.filter-row select:focus, .filter-row input:focus {
+  border-color: var(--accent);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--rule);
+  padding-top: 36px;
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer code { font-family: var(--font-mono); font-size: 12px; background: var(--bg-subtle); padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="../02_Academic_Research_Dashboard/Academic_Research_Dashboard.html" class="nav-brand">
+      <span class="brand-dot"></span>
+      <span class="brand-title">NeuroCheck · Correlations</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../01_Presentation_Return/Presentation_Return.html" class="nav-link" style="color:var(--accent);font-weight:700">Presentation Portal "Return" ↗</a></li>
+      <li><a href="../02_Academic_Research_Dashboard/Academic_Research_Dashboard.html" class="nav-link">&larr; Platform Checking Dashboard</a></li>
+      <li><a href="../02_Academic_Research_Dashboard/DeepLabCut_Motion_Lab.html" class="nav-link" style="color:var(--accent);font-weight:600">DeepLabCut Motion Lab ↗</a></li>
+      <li><a href="../02_Academic_Research_Dashboard/Academic_Research_Dashboard.html" class="nav-link">Behavior Atlas Site</a></li>
+      <li><a href="../04_Individual_Animal_Profiles/Individual_Animal_Profiles.html" class="nav-link">Individual Profiles</a></li>
+    </ul>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
+      <span>Theme</span>
+      <span id="themeIcon">☀️</span>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="editorial-marker">
+      <span class="marker-line"></span>
+      <span class="marker-vol">VOL. IV</span>
+      <span class="marker-dot"></span>
+      <span class="marker-sub">CROSS-EXPERIMENT PHENOTYPING · SFN 2026 ARCHIVE</span>
+      <span class="marker-dot"></span>
+      <span class="marker-badge">KAC COHORT · 29 RATS</span>
+      <span class="marker-line"></span>
+    </div>
+
+    <h1>Cross-Experiment Phenotyping: <em>Water Maze Checking</em> &times; Exploration Assays</h1>
+
+    <p class="hero-lede">
+      Water maze checking dynamics correlated with Elevated Plus Maze (EPM), Open Field (OF), and Novel Object Recognition (NOR/PPT) assays across the KAC cohort (n = 29, <span class="m-text">males 1–16</span>, <span class="f-text">females 17–32</span>). Water maze metrics are drawn from the Day 6 checking test (standard 1.5 cm depth).
+    </p>
+  </header>
+
+  <!-- KPI STRIP -->
+  <section class="kpi-grid">
+    <div class="kpi-card">
+      <span class="kpi-lab">Animals (n)</span>
+      <div class="kpi-val" id="kpi-n">—</div>
+      <div class="kpi-cap">With complete water maze + behavioral battery</div>
+    </div>
+    <div class="kpi-card">
+      <span class="kpi-lab">Significant Tests</span>
+      <div class="kpi-val" id="kpi-sig">—</div>
+      <div class="kpi-cap">p &lt; 0.05 Spearman r across all animals (420 total tests)</div>
+    </div>
+    <div class="kpi-card">
+      <span class="kpi-lab">Strongest Effect</span>
+      <div class="kpi-val" id="kpi-r">—</div>
+      <div class="kpi-cap">Open Field centre entries &times; % platform retention time</div>
+    </div>
+    <div class="kpi-card">
+      <span class="kpi-lab">EPM Dissociation</span>
+      <div class="kpi-val" id="kpi-epm">—</div>
+      <div class="kpi-cap">EPM open arm ratio does not correlate with departures (p &gt; 0.50)</div>
+    </div>
+  </section>
+
+  <!-- TOP 5 & INTERPRETATION -->
+  <section class="two-card-grid">
+    <div class="editorial-card">
+      <h3>Top 5 Ranked Correlations</h3>
+      <ul id="top5-list"></ul>
+    </div>
+    <div class="editorial-card">
+      <h3>Neurobehavioral Interpretation</h3>
+      <ul>
+        <li><strong>Open field locomotion cluster:</strong> Locomotor drive in the open field anti-correlates strongly with platform dwell (r &approx; &minus;0.65, p &lt; 0.001): more active rats depart the platform sooner and more frequently.</li>
+        <li><strong>Center exploration mirrors disembarkation:</strong> Animals entering the open arena center spend significantly less time anchored (r = &minus;0.66). Active open-space boldness maps onto water maze disembarkation.</li>
+        <li><strong>NOR object investigation:</strong> Investigation duration of the relocated object predicts platform departures (r = 0.54) and head scanning sweeps (r = 0.52).</li>
+        <li><strong>Dissociation from anxiety:</strong> EPM open-arm ratio does not correlate with checking departures (r = &minus;0.10, p = 0.59), confirming checking is driven by spatial foraging exploration, not panic.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HEATMAP SECTION -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Correlation Matrices</div>
+      <h2 class="section-title">Behavioral Battery &times; Water Maze Measures</h2>
+      <p class="section-desc">Spearman rank correlation coefficients between anxiety/exploration assays (rows) and water maze Day 6 checking measures (columns).</p>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab(event,'hm-all')">All Animals (n = 29)</div>
+      <div class="tab" onclick="switchTab(event,'hm-male')">Males Only (n = 13)</div>
+      <div class="tab" onclick="switchTab(event,'hm-female')">Females Only (n = 16)</div>
+    </div>
+
+    <div class="tab-content active" id="hm-all">
+      <figure class="plate">
+        <img src="figures/corr_heatmap_all.png" alt="Correlation heatmap – all animals" loading="lazy">
+        <figcaption><b>All animals (n = 29):</b> Rows encompass EPM, Open Field, NOR-Feb, and KAOFam. Columns encompass Water Maze Day 6 checking, latency, and probe measures.</figcaption>
+      </figure>
+    </div>
+    <div class="tab-content" id="hm-male">
+      <figure class="plate">
+        <img src="figures/corr_heatmap_male.png" alt="Correlation heatmap – males" loading="lazy">
+        <figcaption><b>Males only (n = 13)</b></figcaption>
+      </figure>
+    </div>
+    <div class="tab-content" id="hm-female">
+      <figure class="plate">
+        <img src="figures/corr_heatmap_female.png" alt="Correlation heatmap – females" loading="lazy">
+        <figcaption><b>Females only (n = 16)</b></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SCATTER PLOTS -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Bivariate Relationships</div>
+      <h2 class="section-title">Key Scatter Plots with Animal Annotations</h2>
+      <p class="section-desc">Each point denotes an individual animal, color-coded by sex (<span class="m-text">&block; Male</span>, <span class="f-text">&block; Female</span>) with linear regression fit line.</p>
+    </div>
+
+    <div class="scatter-grid" id="scatter-grid"></div>
+  </section>
+
+  <!-- SIGNIFICANT CORRELATIONS TABLE -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Statistical Audit</div>
+      <h2 class="section-title">All Statistically Significant Tests (p &lt; 0.05)</h2>
+      <p class="section-desc">Ranked by effect magnitude |r|. Click column headers to sort.</p>
+    </div>
+
+    <div class="tbl-card">
+      <div class="table-wrap table-wrap-fixed">
+        <table id="sig-table">
+          <thead>
+            <tr>
+              <th onclick="sortSigTable(0)" data-col="0">Assay Measure<span class="sort-arrow"></span></th>
+              <th onclick="sortSigTable(1)" data-col="1">Water Maze Measure<span class="sort-arrow"></span></th>
+              <th onclick="sortSigTable(2)" data-col="2">n<span class="sort-arrow"></span></th>
+              <th onclick="sortSigTable(3)" data-col="3">Spearman r<span class="sort-arrow"></span></th>
+              <th onclick="sortSigTable(4)" data-col="4">P-Value<span class="sort-arrow"></span></th>
+              <th onclick="sortSigTable(5)" data-col="5">|r|<span class="sort-arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="sig-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERGED PER-RAT DATA TABLE -->
+  <section>
+    <div class="section-head">
+      <div class="section-eyebrow">Raw Master Dataset</div>
+      <h2 class="section-title">Per-Rat Integrated Records</h2>
+      <p class="section-desc">Full 39-variable merged matrix across all 29 animals. Click column headers to sort; filter by sex or search by rat ID.</p>
+    </div>
+
+    <div class="filter-row">
+      <label>Filter by Sex:</label>
+      <select id="sex-filter" onchange="renderTable()">
+        <option value="all">All Cohorts (29)</option>
+        <option value="M">Males Only (13)</option>
+        <option value="F">Females Only (16)</option>
+      </select>
+      <label>Search Record:</label>
+      <input type="text" id="search-box" placeholder="e.g. rat ID or value..." oninput="renderTable()" style="width:180px">
+    </div>
+
+    <div class="tbl-card">
+      <div class="table-wrap table-wrap-fixed">
+        <table id="main-table">
+          <thead id="main-thead"></thead>
+          <tbody id="main-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Cross-Experiment Integration Pipeline &middot; Compiled from <code>build_correlations.py</code> &middot; KAC Cohort &middot; Water Maze Day 6 Checking Tests &times; EPM &times; Open Field &times; NOR (Feb 2026) &times; KAOFam (Nov 2025).
+    </p>
+    <p style="margin-top:8px">
+      Return to <a href="../02_Academic_Research_Dashboard/Academic_Research_Dashboard.html">Platform Checking Dashboard</a> or explore the <a href="../02_Academic_Research_Dashboard/Academic_Research_Dashboard.html">Behavior Atlas</a>.
+    </p>
+  </footer>
+
+</div>
+
+<script>
+// Theme Switcher Logic
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const target = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', target);
+  localStorage.setItem('neuro_theme', target);
+  updateThemeIcon(target);
+}
+function updateThemeIcon(theme) {
+  document.getElementById('themeIcon').textContent = theme === 'dark' ? '🌙' : '☀️';
+}
+(function() {
+  const saved = localStorage.getItem('neuro_theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeIcon(saved);
+  }
+})();
+</script>
+<script>
+// ── Embedded data ────────────────────────────────────────────────────────────
+const MERGED_ROWS = [{"rat": 2, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 35.929371728098204, "head_sweeps_per_min": 6.689377516258903, "vte_episodes_per_min": 0.0, "distance_observed_cm": 205.9059416901836, "speed_observed_cm_s": null, "mean_latency_d1_5": 29.185, "probe_pct_on_platform": 95.83333333333331, "probe_dist_cm": 113.78, "epm_caz_entries": 15.0, "epm_caz_time_s": 224.3, "epm_caz_dist_m": 11.909, "epm_oaz_entries": 16.0, "epm_oaz_time_s": 42.3, "epm_oaz_dist_m": 1.763, "epm_center_entries": 31.0, "epm_ratio_time": 0.188586714222024, "of_distance_m": 1.316, "of_mean_speed_ms": 0.004, "of_wz_entries": 30.0, "of_wz_time_s": 171.6, "of_cz_entries": 5.0, "of_cz_time_s": 8.6, "nor_total_distance_cm": 1506.24, "nor_mean_speed_cms": 5.02, "nor_obj_loc_n_invest": 2.0, "nor_obj_loc_time_invest_s": 4.9, "nor_obj_loc_latency_s": 73.3, "nor_obj_area_time_s": 6.8, "kaofam_total_distance_cm": 2990.04, "kaofam_mean_speed_cms": 9.97, "kaofam_obj_loc_n_invest": 10.0, "kaofam_obj_loc_time_invest_s": 8.3, "kaofam_obj_loc_latency_s": 127.1, "kaofam_obj_area_time_s": 52.4, "sex": "M"}, {"rat": 3, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 46.54233295141756, "head_sweeps_per_min": 16.62933930571109, "vte_episodes_per_min": 3.023516237402016, "distance_observed_cm": 260.77599452147246, "speed_observed_cm_s": null, "mean_latency_d1_5": 18.755000000000003, "probe_pct_on_platform": 100.0, "probe_dist_cm": 102.19, "epm_caz_entries": 29.0, "epm_caz_time_s": 204.7, "epm_caz_dist_m": 14.083, "epm_oaz_entries": 16.0, "epm_oaz_time_s": 30.7, "epm_oaz_dist_m": 0.808, "epm_center_entries": 42.0, "epm_ratio_time": 0.1499755740107474, "of_distance_m": 1.456, "of_mean_speed_ms": 0.005, "of_wz_entries": 16.0, "of_wz_time_s": 273.3, "of_cz_entries": 0.0, "of_cz_time_s": 0.0, "nor_total_distance_cm": 2068.0, "nor_mean_speed_cms": 6.89, "nor_obj_loc_n_invest": 3.0, "nor_obj_loc_time_invest_s": 2.5, "nor_obj_loc_latency_s": 223.9, "nor_obj_area_time_s": 10.5, "kaofam_total_distance_cm": 3617.66, "kaofam_mean_speed_cms": 12.06, "kaofam_obj_loc_n_invest": 11.0, "kaofam_obj_loc_time_invest_s": 7.7, "kaofam_obj_loc_latency_s": 106.5, "kaofam_obj_area_time_s": 56.2, "sex": "M"}, {"rat": 4, "sex_wm": "M", "platform_lower_pct": 88.41666666666667, "departures_observed": 1, "head_turn_pre_deg_s": 65.17237664618219, "head_sweeps_per_min": 28.02669208770257, "vte_episodes_per_min": 1.1439466158245948, "distance_observed_cm": 635.0543837907429, "speed_observed_cm_s": 22.557793448428257, "mean_latency_d1_5": 24.205, "probe_pct_on_platform": 86.83333333333333, "probe_dist_cm": 447.49, "epm_caz_entries": 23.0, "epm_caz_time_s": 212.8, "epm_caz_dist_m": 16.437, "epm_oaz_entries": 14.0, "epm_oaz_time_s": 49.1, "epm_oaz_dist_m": 2.891, "epm_center_entries": 37.0, "epm_ratio_time": 0.2307330827067669, "of_distance_m": 2.862, "of_mean_speed_ms": 0.01, "of_wz_entries": 49.0, "of_wz_time_s": 230.6, "of_cz_entries": 12.0, "of_cz_time_s": 17.0, "nor_total_distance_cm": 4657.06, "nor_mean_speed_cms": 15.52, "nor_obj_loc_n_invest": 21.0, "nor_obj_loc_time_invest_s": 12.4, "nor_obj_loc_latency_s": 41.8, "nor_obj_area_time_s": 32.3, "kaofam_total_distance_cm": 4868.49, "kaofam_mean_speed_cms": 16.23, "kaofam_obj_loc_n_invest": 2.0, "kaofam_obj_loc_time_invest_s": 0.3, "kaofam_obj_loc_latency_s": 174.2, "kaofam_obj_area_time_s": 35.8, "sex": "M"}, {"rat": 5, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 41.866817882282206, "head_sweeps_per_min": 14.662921348314606, "vte_episodes_per_min": 0.5056179775280899, "distance_observed_cm": 239.33931862633537, "speed_observed_cm_s": null, "mean_latency_d1_5": 23.18, "probe_pct_on_platform": 100.0, "probe_dist_cm": 94.78, "epm_caz_entries": 8.0, "epm_caz_time_s": 86.1, "epm_caz_dist_m": 8.143, "epm_oaz_entries": 18.0, "epm_oaz_time_s": 128.4, "epm_oaz_dist_m": 8.101, "epm_center_entries": 26.0, "epm_ratio_time": 1.491289198606272, "of_distance_m": 0.456, "of_mean_speed_ms": 0.017, "of_wz_entries": 4.0, "of_wz_time_s": 23.8, "of_cz_entries": 0.0, "of_cz_time_s": 0.0, "nor_total_distance_cm": 4496.02, "nor_mean_speed_cms": 14.99, "nor_obj_loc_n_invest": 27.0, "nor_obj_loc_time_invest_s": 31.7, "nor_obj_loc_latency_s": 20.8, "nor_obj_area_time_s": 61.3, "kaofam_total_distance_cm": 3803.92, "kaofam_mean_speed_cms": 12.93, "kaofam_obj_loc_n_invest": 11.0, "kaofam_obj_loc_time_invest_s": 9.6, "kaofam_obj_loc_latency_s": 122.5, "kaofam_obj_area_time_s": 65.4, "sex": "M"}, {"rat": 6, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 48.421303201663854, "head_sweeps_per_min": 14.893009985734668, "vte_episodes_per_min": 1.0271041369472182, "distance_observed_cm": 274.59152541131715, "speed_observed_cm_s": null, "mean_latency_d1_5": 12.715, "probe_pct_on_platform": 94.25, "probe_dist_cm": 171.41, "epm_caz_entries": 14.0, "epm_caz_time_s": 101.8, "epm_caz_dist_m": 10.322, "epm_oaz_entries": 16.0, "epm_oaz_time_s": 160.8, "epm_oaz_dist_m": 13.055, "epm_center_entries": 30.0, "epm_ratio_time": 1.5795677799607075, "of_distance_m": 2.197, "of_mean_speed_ms": 0.007, "of_wz_entries": 23.0, "of_wz_time_s": 252.3, "of_cz_entries": 13.0, "of_cz_time_s": 18.7, "nor_total_distance_cm": 4393.6, "nor_mean_speed_cms": 14.65, "nor_obj_loc_n_invest": 22.0, "nor_obj_loc_time_invest_s": 14.6, "nor_obj_loc_latency_s": 5.0, "nor_obj_area_time_s": 41.0, "kaofam_total_distance_cm": 4458.58, "kaofam_mean_speed_cms": 14.86, "kaofam_obj_loc_n_invest": 11.0, "kaofam_obj_loc_time_invest_s": 12.2, "kaofam_obj_loc_latency_s": 120.8, "kaofam_obj_area_time_s": 43.7, "sex": "M"}, {"rat": 7, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 69.79159775651857, "head_sweeps_per_min": 19.30567315834039, "vte_episodes_per_min": 5.080440304826419, "distance_observed_cm": 243.23870155552163, "speed_observed_cm_s": null, "mean_latency_d1_5": 19.24, "probe_pct_on_platform": 100.0, "probe_dist_cm": 19.07, "epm_caz_entries": 14.0, "epm_caz_time_s": 66.8, "epm_caz_dist_m": 7.164, "epm_oaz_entries": 16.0, "epm_oaz_time_s": 138.4, "epm_oaz_dist_m": 10.163, "epm_center_entries": 29.0, "epm_ratio_time": 2.07185628742515, "of_distance_m": 1.616, "of_mean_speed_ms": 0.005, "of_wz_entries": 28.0, "of_wz_time_s": 245.0, "of_cz_entries": 1.0, "of_cz_time_s": 2.0, "nor_total_distance_cm": 1103.76, "nor_mean_speed_cms": 3.68, "nor_obj_loc_n_invest": 0.0, "nor_obj_loc_time_invest_s": 0.0, "nor_obj_loc_latency_s": null, "nor_obj_area_time_s": 0.0, "kaofam_total_distance_cm": 2653.98, "kaofam_mean_speed_cms": 8.85, "kaofam_obj_loc_n_invest": 11.0, "kaofam_obj_loc_time_invest_s": 15.4, "kaofam_obj_loc_latency_s": 163.5, "kaofam_obj_area_time_s": 79.3, "sex": "M"}, {"rat": 8, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 57.80028171369125, "head_sweeps_per_min": 17.726505346088913, "vte_episodes_per_min": 2.0258863252673045, "distance_observed_cm": 304.3918489115647, "speed_observed_cm_s": null, "mean_latency_d1_5": 20.02, "probe_pct_on_platform": 94.25, "probe_dist_cm": 194.67, "epm_caz_entries": 10.0, "epm_caz_time_s": 164.6, "epm_caz_dist_m": 10.303, "epm_oaz_entries": 12.0, "epm_oaz_time_s": 87.2, "epm_oaz_dist_m": 4.023, "epm_center_entries": 22.0, "epm_ratio_time": 0.5297691373025517, "of_distance_m": 1.902, "of_mean_speed_ms": 0.006, "of_wz_entries": 30.0, "of_wz_time_s": 152.0, "of_cz_entries": 4.0, "of_cz_time_s": 6.9, "nor_total_distance_cm": 1315.33, "nor_mean_speed_cms": 4.38, "nor_obj_loc_n_invest": 10.0, "nor_obj_loc_time_invest_s": 5.9, "nor_obj_loc_latency_s": 95.1, "nor_obj_area_time_s": 23.4, "kaofam_total_distance_cm": 3792.91, "kaofam_mean_speed_cms": 12.64, "kaofam_obj_loc_n_invest": 8.0, "kaofam_obj_loc_time_invest_s": 9.1, "kaofam_obj_loc_latency_s": 213.2, "kaofam_obj_area_time_s": 66.8, "sex": "M"}, {"rat": 9, "sex_wm": "M", "platform_lower_pct": 96.86111111111111, "departures_observed": 1, "head_turn_pre_deg_s": null, "head_sweeps_per_min": 11.824425201552703, "vte_episodes_per_min": 0.0, "distance_observed_cm": 236.4531292294054, "speed_observed_cm_s": 12.593608251260838, "mean_latency_d1_5": 21.475, "probe_pct_on_platform": 94.0, "probe_dist_cm": 99.54, "epm_caz_entries": 14.0, "epm_caz_time_s": 142.5, "epm_caz_dist_m": 11.087, "epm_oaz_entries": 12.0, "epm_oaz_time_s": 68.5, "epm_oaz_dist_m": 5.517, "epm_center_entries": 26.0, "epm_ratio_time": 0.4807017543859649, "of_distance_m": 1.461, "of_mean_speed_ms": 0.005, "of_wz_entries": 25.0, "of_wz_time_s": 246.9, "of_cz_entries": 4.0, "of_cz_time_s": 11.6, "nor_total_distance_cm": 2844.64, "nor_mean_speed_cms": 9.48, "nor_obj_loc_n_invest": 22.0, "nor_obj_loc_time_invest_s": 11.5, "nor_obj_loc_latency_s": 102.0, "nor_obj_area_time_s": 32.5, "kaofam_total_distance_cm": 3238.6, "kaofam_mean_speed_cms": 10.8, "kaofam_obj_loc_n_invest": 21.0, "kaofam_obj_loc_time_invest_s": 7.2, "kaofam_obj_loc_latency_s": 128.4, "kaofam_obj_area_time_s": 47.7, "sex": "M"}, {"rat": 10, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 54.74426878064002, "head_sweeps_per_min": 20.534223706176963, "vte_episodes_per_min": 2.003338898163606, "distance_observed_cm": 295.79515558595455, "speed_observed_cm_s": null, "mean_latency_d1_5": 25.255000000000003, "probe_pct_on_platform": 100.0, "probe_dist_cm": 5.9, "epm_caz_entries": 20.0, "epm_caz_time_s": 149.5, "epm_caz_dist_m": 8.071, "epm_oaz_entries": 13.0, "epm_oaz_time_s": 100.8, "epm_oaz_dist_m": 2.565, "epm_center_entries": 32.0, "epm_ratio_time": 0.6742474916387959, "of_distance_m": 3.137, "of_mean_speed_ms": 0.01, "of_wz_entries": 41.0, "of_wz_time_s": 203.7, "of_cz_entries": 12.0, "of_cz_time_s": 23.2, "nor_total_distance_cm": 4120.73, "nor_mean_speed_cms": 13.74, "nor_obj_loc_n_invest": 21.0, "nor_obj_loc_time_invest_s": 22.7, "nor_obj_loc_latency_s": 13.0, "nor_obj_area_time_s": 63.2, "kaofam_total_distance_cm": 4398.98, "kaofam_mean_speed_cms": 14.66, "kaofam_obj_loc_n_invest": 13.0, "kaofam_obj_loc_time_invest_s": 11.9, "kaofam_obj_loc_latency_s": 79.6, "kaofam_obj_area_time_s": 60.6, "sex": "M"}, {"rat": 12, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 71.23047752253122, "head_sweeps_per_min": 17.73149451168027, "vte_episodes_per_min": 5.066141289051506, "distance_observed_cm": 286.7953743512695, "speed_observed_cm_s": null, "mean_latency_d1_5": 21.85, "probe_pct_on_platform": 100.0, "probe_dist_cm": 78.32000000000001, "epm_caz_entries": 19.0, "epm_caz_time_s": 183.3, "epm_caz_dist_m": 16.552, "epm_oaz_entries": 11.0, "epm_oaz_time_s": 66.6, "epm_oaz_dist_m": 5.786, "epm_center_entries": 30.0, "epm_ratio_time": 0.3633387888707037, "of_distance_m": 2.276, "of_mean_speed_ms": 0.008, "of_wz_entries": 42.0, "of_wz_time_s": 240.4, "of_cz_entries": 5.0, "of_cz_time_s": 5.1, "nor_total_distance_cm": 3718.18, "nor_mean_speed_cms": 12.39, "nor_obj_loc_n_invest": 18.0, "nor_obj_loc_time_invest_s": 35.4, "nor_obj_loc_latency_s": 11.1, "nor_obj_area_time_s": 56.8, "kaofam_total_distance_cm": 4186.79, "kaofam_mean_speed_cms": 13.96, "kaofam_obj_loc_n_invest": 12.0, "kaofam_obj_loc_time_invest_s": 11.5, "kaofam_obj_loc_latency_s": 130.6, "kaofam_obj_area_time_s": 43.2, "sex": "M"}, {"rat": 13, "sex_wm": "M", "platform_lower_pct": 86.66666666666667, "departures_observed": 1, "head_turn_pre_deg_s": 67.31834915922083, "head_sweeps_per_min": 29.450261780104714, "vte_episodes_per_min": 1.7670157068062828, "distance_observed_cm": 796.4987372280215, "speed_observed_cm_s": 28.770752472269297, "mean_latency_d1_5": 23.125, "probe_pct_on_platform": 85.66666666666667, "probe_dist_cm": 626.93, "epm_caz_entries": 25.0, "epm_caz_time_s": 204.8, "epm_caz_dist_m": 12.611, "epm_oaz_entries": 7.0, "epm_oaz_time_s": 59.7, "epm_oaz_dist_m": 4.447, "epm_center_entries": 32.0, "epm_ratio_time": 0.29150390625, "of_distance_m": 2.879, "of_mean_speed_ms": 0.01, "of_wz_entries": 35.0, "of_wz_time_s": 209.3, "of_cz_entries": 13.0, "of_cz_time_s": 22.6, "nor_total_distance_cm": 4535.64, "nor_mean_speed_cms": 15.12, "nor_obj_loc_n_invest": 9.0, "nor_obj_loc_time_invest_s": 5.8, "nor_obj_loc_latency_s": 55.0, "nor_obj_area_time_s": 35.2, "kaofam_total_distance_cm": 5017.77, "kaofam_mean_speed_cms": 16.73, "kaofam_obj_loc_n_invest": 3.0, "kaofam_obj_loc_time_invest_s": 2.4, "kaofam_obj_loc_latency_s": 140.8, "kaofam_obj_area_time_s": 36.1, "sex": "M"}, {"rat": 14, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 82.38138487409269, "head_sweeps_per_min": 33.982947624847746, "vte_episodes_per_min": 7.125456760048721, "distance_observed_cm": 264.39894021042954, "speed_observed_cm_s": null, "mean_latency_d1_5": 19.26, "probe_pct_on_platform": 100.0, "probe_dist_cm": 62.24, "epm_caz_entries": 7.0, "epm_caz_time_s": 242.9, "epm_caz_dist_m": 8.651, "epm_oaz_entries": 5.0, "epm_oaz_time_s": 43.2, "epm_oaz_dist_m": 3.155, "epm_center_entries": 12.0, "epm_ratio_time": 0.1778509674763277, "of_distance_m": 1.469, "of_mean_speed_ms": 0.005, "of_wz_entries": 19.0, "of_wz_time_s": 284.0, "of_cz_entries": 1.0, "of_cz_time_s": 0.7, "nor_total_distance_cm": 2898.8, "nor_mean_speed_cms": 9.66, "nor_obj_loc_n_invest": 4.0, "nor_obj_loc_time_invest_s": 0.8, "nor_obj_loc_latency_s": 40.4, "nor_obj_area_time_s": 9.0, "kaofam_total_distance_cm": 3259.09, "kaofam_mean_speed_cms": 10.86, "kaofam_obj_loc_n_invest": 5.0, "kaofam_obj_loc_time_invest_s": 4.2, "kaofam_obj_loc_latency_s": 166.2, "kaofam_obj_area_time_s": 40.8, "sex": "M"}, {"rat": 15, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 62.03231171497847, "head_sweeps_per_min": 28.611978427476583, "vte_episodes_per_min": 3.576497303434573, "distance_observed_cm": 332.0976009731745, "speed_observed_cm_s": null, "mean_latency_d1_5": 22.585, "probe_pct_on_platform": 99.75, "probe_dist_cm": 96.21, "epm_caz_entries": 21.0, "epm_caz_time_s": 154.0, "epm_caz_dist_m": 12.235, "epm_oaz_entries": 11.0, "epm_oaz_time_s": 92.2, "epm_oaz_dist_m": 6.326, "epm_center_entries": 32.0, "epm_ratio_time": 0.5987012987012987, "of_distance_m": 1.813, "of_mean_speed_ms": 0.006, "of_wz_entries": 23.0, "of_wz_time_s": 268.0, "of_cz_entries": 2.0, "of_cz_time_s": 2.1, "nor_total_distance_cm": 3703.88, "nor_mean_speed_cms": 12.35, "nor_obj_loc_n_invest": 18.0, "nor_obj_loc_time_invest_s": 16.2, "nor_obj_loc_latency_s": 90.1, "nor_obj_area_time_s": 36.5, "kaofam_total_distance_cm": 4443.57, "kaofam_mean_speed_cms": 14.81, "kaofam_obj_loc_n_invest": 3.0, "kaofam_obj_loc_time_invest_s": 3.0, "kaofam_obj_loc_latency_s": 57.6, "kaofam_obj_area_time_s": 31.4, "sex": "M"}, {"rat": 16, "sex_wm": "M", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 44.95799299729878, "head_sweeps_per_min": 10.674950578932505, "vte_episodes_per_min": 0.0, "distance_observed_cm": 257.22782610726034, "speed_observed_cm_s": null, "mean_latency_d1_5": 25.76, "probe_pct_on_platform": 100.0, "probe_dist_cm": 104.08, "epm_caz_entries": 16.0, "epm_caz_time_s": 200.8, "epm_caz_dist_m": 5.541, "epm_oaz_entries": 13.0, "epm_oaz_time_s": 77.4, "epm_oaz_dist_m": 2.322, "epm_center_entries": 28.0, "epm_ratio_time": 0.3854581673306773, "of_distance_m": 1.373, "of_mean_speed_ms": 0.005, "of_wz_entries": 15.0, "of_wz_time_s": 274.7, "of_cz_entries": 0.0, "of_cz_time_s": 0.0, "nor_total_distance_cm": 1568.3, "nor_mean_speed_cms": 5.23, "nor_obj_loc_n_invest": 4.0, "nor_obj_loc_time_invest_s": 6.4, "nor_obj_loc_latency_s": 100.4, "nor_obj_area_time_s": 11.6, "kaofam_total_distance_cm": 3771.63, "kaofam_mean_speed_cms": 12.57, "kaofam_obj_loc_n_invest": 7.0, "kaofam_obj_loc_time_invest_s": 8.5, "kaofam_obj_loc_latency_s": 215.2, "kaofam_obj_area_time_s": 45.4, "sex": "M"}, {"rat": 17, "sex_wm": "F", "platform_lower_pct": 69.88888888888889, "departures_observed": 2, "head_turn_pre_deg_s": 87.73970657859965, "head_sweeps_per_min": 42.70205066344994, "vte_episodes_per_min": 5.066344993968637, "distance_observed_cm": 1393.2563892457215, "speed_observed_cm_s": 29.28887267952624, "mean_latency_d1_5": 19.615, "probe_pct_on_platform": 66.33333333333333, "probe_dist_cm": 1274.11, "epm_caz_entries": 19.0, "epm_caz_time_s": 237.3, "epm_caz_dist_m": 18.45, "epm_oaz_entries": 14.0, "epm_oaz_time_s": 43.9, "epm_oaz_dist_m": 3.594, "epm_center_entries": 33.0, "epm_ratio_time": 0.1849978929624947, "of_distance_m": 3.475, "of_mean_speed_ms": 0.012, "of_wz_entries": 55.0, "of_wz_time_s": 176.6, "of_cz_entries": 23.0, "of_cz_time_s": 37.1, "nor_total_distance_cm": 5918.7, "nor_mean_speed_cms": 19.73, "nor_obj_loc_n_invest": 12.0, "nor_obj_loc_time_invest_s": 14.5, "nor_obj_loc_latency_s": 61.7, "nor_obj_area_time_s": 32.4, "kaofam_total_distance_cm": 5644.34, "kaofam_mean_speed_cms": 18.81, "kaofam_obj_loc_n_invest": 7.0, "kaofam_obj_loc_time_invest_s": 2.6, "kaofam_obj_loc_latency_s": 111.6, "kaofam_obj_area_time_s": 38.8, "sex": "F"}, {"rat": 18, "sex_wm": "F", "platform_lower_pct": 71.72222222222221, "departures_observed": 3, "head_turn_pre_deg_s": 85.6835024594919, "head_sweeps_per_min": 30.163678877630552, "vte_episodes_per_min": 1.4029618082618862, "distance_observed_cm": 1166.2167443644005, "speed_observed_cm_s": 25.898699054216905, "mean_latency_d1_5": 24.813333333333333, "probe_pct_on_platform": 60.583333333333336, "probe_dist_cm": 1028.51, "epm_caz_entries": 17.0, "epm_caz_time_s": 189.0, "epm_caz_dist_m": 12.923, "epm_oaz_entries": 10.0, "epm_oaz_time_s": 69.8, "epm_oaz_dist_m": 5.377, "epm_center_entries": 27.0, "epm_ratio_time": 0.3693121693121693, "of_distance_m": 2.743, "of_mean_speed_ms": 0.009, "of_wz_entries": 41.0, "of_wz_time_s": 182.7, "of_cz_entries": 14.0, "of_cz_time_s": 28.8, "nor_total_distance_cm": 3811.35, "nor_mean_speed_cms": 12.7, "nor_obj_loc_n_invest": 28.0, "nor_obj_loc_time_invest_s": 22.6, "nor_obj_loc_latency_s": 80.4, "nor_obj_area_time_s": 45.4, "kaofam_total_distance_cm": 5316.46, "kaofam_mean_speed_cms": 17.72, "kaofam_obj_loc_n_invest": 8.0, "kaofam_obj_loc_time_invest_s": 6.0, "kaofam_obj_loc_latency_s": 250.8, "kaofam_obj_area_time_s": 37.2, "sex": "F"}, {"rat": 20, "sex_wm": "F", "platform_lower_pct": 99.5277777777778, "departures_observed": 0, "head_turn_pre_deg_s": 65.02601433572126, "head_sweeps_per_min": 28.81646655231561, "vte_episodes_per_min": 2.572898799313894, "distance_observed_cm": 351.2938907588858, "speed_observed_cm_s": 14.417761620362509, "mean_latency_d1_5": 23.05, "probe_pct_on_platform": 100.0, "probe_dist_cm": 152.31, "epm_caz_entries": 21.0, "epm_caz_time_s": 186.5, "epm_caz_dist_m": 17.073, "epm_oaz_entries": 11.0, "epm_oaz_time_s": 50.4, "epm_oaz_dist_m": 2.268, "epm_center_entries": 32.0, "epm_ratio_time": 0.2702412868632707, "of_distance_m": 3.502, "of_mean_speed_ms": 0.012, "of_wz_entries": 75.0, "of_wz_time_s": 156.7, "of_cz_entries": 15.0, "of_cz_time_s": 25.7, "nor_total_distance_cm": 6684.69, "nor_mean_speed_cms": 22.28, "nor_obj_loc_n_invest": 23.0, "nor_obj_loc_time_invest_s": 15.5, "nor_obj_loc_latency_s": 0.0, "nor_obj_area_time_s": 33.0, "kaofam_total_distance_cm": 4226.08, "kaofam_mean_speed_cms": 14.09, "kaofam_obj_loc_n_invest": 6.0, "kaofam_obj_loc_time_invest_s": 4.0, "kaofam_obj_loc_latency_s": 89.0, "kaofam_obj_area_time_s": 56.0, "sex": "F"}, {"rat": 21, "sex_wm": "F", "platform_lower_pct": 22.88888888888889, "departures_observed": 2, "head_turn_pre_deg_s": null, "head_sweeps_per_min": 40.14869888475837, "vte_episodes_per_min": 4.4609665427509295, "distance_observed_cm": 2589.637723829118, "speed_observed_cm_s": 26.52803873928137, "mean_latency_d1_5": 24.05, "probe_pct_on_platform": 19.83333333333333, "probe_dist_cm": 2394.26, "epm_caz_entries": 19.0, "epm_caz_time_s": 187.9, "epm_caz_dist_m": 18.76, "epm_oaz_entries": 10.0, "epm_oaz_time_s": 90.4, "epm_oaz_dist_m": 9.062, "epm_center_entries": 28.0, "epm_ratio_time": 0.4811069717935072, "of_distance_m": 3.623, "of_mean_speed_ms": 0.012, "of_wz_entries": 53.0, "of_wz_time_s": 216.4, "of_cz_entries": 13.0, "of_cz_time_s": 17.9, "nor_total_distance_cm": 6154.44, "nor_mean_speed_cms": 20.51, "nor_obj_loc_n_invest": 46.0, "nor_obj_loc_time_invest_s": 35.2, "nor_obj_loc_latency_s": 13.7, "nor_obj_area_time_s": 59.4, "kaofam_total_distance_cm": 5585.24, "kaofam_mean_speed_cms": 18.62, "kaofam_obj_loc_n_invest": 17.0, "kaofam_obj_loc_time_invest_s": 10.4, "kaofam_obj_loc_latency_s": 148.7, "kaofam_obj_area_time_s": 58.8, "sex": "F"}, {"rat": 22, "sex_wm": "F", "platform_lower_pct": 71.5, "departures_observed": 1, "head_turn_pre_deg_s": 78.3657226742277, "head_sweeps_per_min": 35.57312252964427, "vte_episodes_per_min": 2.134387351778656, "distance_observed_cm": 1199.3641469913568, "speed_observed_cm_s": 27.76515296380944, "mean_latency_d1_5": 17.175, "probe_pct_on_platform": 70.75, "probe_dist_cm": 1121.63, "epm_caz_entries": 14.0, "epm_caz_time_s": 131.0, "epm_caz_dist_m": 13.193, "epm_oaz_entries": 16.0, "epm_oaz_time_s": 134.9, "epm_oaz_dist_m": 8.925, "epm_center_entries": 29.0, "epm_ratio_time": 1.0297709923664122, "of_distance_m": 4.414, "of_mean_speed_ms": 0.015, "of_wz_entries": 36.0, "of_wz_time_s": 189.2, "of_cz_entries": 20.0, "of_cz_time_s": 28.1, "nor_total_distance_cm": 7148.18, "nor_mean_speed_cms": 23.83, "nor_obj_loc_n_invest": 26.0, "nor_obj_loc_time_invest_s": 37.1, "nor_obj_loc_latency_s": 9.3, "nor_obj_area_time_s": 57.0, "kaofam_total_distance_cm": 7292.74, "kaofam_mean_speed_cms": 24.31, "kaofam_obj_loc_n_invest": 18.0, "kaofam_obj_loc_time_invest_s": 13.4, "kaofam_obj_loc_latency_s": 88.2, "kaofam_obj_area_time_s": 50.1, "sex": "F"}, {"rat": 23, "sex_wm": "F", "platform_lower_pct": 86.5, "departures_observed": 2, "head_turn_pre_deg_s": 58.54141408384304, "head_sweeps_per_min": 24.466019417475728, "vte_episodes_per_min": 1.1650485436893203, "distance_observed_cm": 721.2089068126564, "speed_observed_cm_s": 28.06677846102866, "mean_latency_d1_5": 18.86, "probe_pct_on_platform": 84.75, "probe_dist_cm": 607.95, "epm_caz_entries": 18.0, "epm_caz_time_s": 149.4, "epm_caz_dist_m": 13.846, "epm_oaz_entries": 25.0, "epm_oaz_time_s": 83.9, "epm_oaz_dist_m": 8.279, "epm_center_entries": 42.0, "epm_ratio_time": 0.5615796519410977, "of_distance_m": 3.187, "of_mean_speed_ms": 0.011, "of_wz_entries": 66.0, "of_wz_time_s": 203.0, "of_cz_entries": 10.0, "of_cz_time_s": 12.9, "nor_total_distance_cm": 4930.75, "nor_mean_speed_cms": 16.44, "nor_obj_loc_n_invest": 30.0, "nor_obj_loc_time_invest_s": 38.9, "nor_obj_loc_latency_s": 12.2, "nor_obj_area_time_s": 76.9, "kaofam_total_distance_cm": 4359.7, "kaofam_mean_speed_cms": 14.53, "kaofam_obj_loc_n_invest": 10.0, "kaofam_obj_loc_time_invest_s": 9.1, "kaofam_obj_loc_latency_s": 99.0, "kaofam_obj_area_time_s": 53.7, "sex": "F"}, {"rat": 24, "sex_wm": "F", "platform_lower_pct": 76.41666666666667, "departures_observed": 1, "head_turn_pre_deg_s": 95.20626472666686, "head_sweeps_per_min": 30.318564628341267, "vte_episodes_per_min": 1.9772976931526915, "distance_observed_cm": 1078.569983204579, "speed_observed_cm_s": 27.66066992499932, "mean_latency_d1_5": 25.11, "probe_pct_on_platform": 75.66666666666667, "probe_dist_cm": 925.2, "epm_caz_entries": 10.0, "epm_caz_time_s": 150.9, "epm_caz_dist_m": 9.189, "epm_oaz_entries": 9.0, "epm_oaz_time_s": 105.7, "epm_oaz_dist_m": 5.962, "epm_center_entries": 19.0, "epm_ratio_time": 0.7004638833664678, "of_distance_m": 2.412, "of_mean_speed_ms": 0.008, "of_wz_entries": 42.0, "of_wz_time_s": 220.7, "of_cz_entries": 7.0, "of_cz_time_s": 9.5, "nor_total_distance_cm": 4405.88, "nor_mean_speed_cms": 14.69, "nor_obj_loc_n_invest": 40.0, "nor_obj_loc_time_invest_s": 39.7, "nor_obj_loc_latency_s": 27.0, "nor_obj_area_time_s": 70.3, "kaofam_total_distance_cm": 4748.42, "kaofam_mean_speed_cms": 15.83, "kaofam_obj_loc_n_invest": 5.0, "kaofam_obj_loc_time_invest_s": 3.4, "kaofam_obj_loc_latency_s": 187.7, "kaofam_obj_area_time_s": 39.3, "sex": "F"}, {"rat": 25, "sex_wm": "F", "platform_lower_pct": 38.61111111111112, "departures_observed": 4, "head_turn_pre_deg_s": 129.6092604932845, "head_sweeps_per_min": 50.72353389185073, "vte_episodes_per_min": 8.225437928408224, "distance_observed_cm": 2614.9215268571816, "speed_observed_cm_s": 32.33342601086597, "mean_latency_d1_5": 20.89, "probe_pct_on_platform": 37.0, "probe_dist_cm": 2224.42, "epm_caz_entries": 18.0, "epm_caz_time_s": 184.9, "epm_caz_dist_m": 14.337, "epm_oaz_entries": 9.0, "epm_oaz_time_s": 76.0, "epm_oaz_dist_m": 6.738, "epm_center_entries": 25.0, "epm_ratio_time": 0.411032990805841, "of_distance_m": 2.595, "of_mean_speed_ms": 0.009, "of_wz_entries": 55.0, "of_wz_time_s": 187.9, "of_cz_entries": 13.0, "of_cz_time_s": 14.1, "nor_total_distance_cm": 4043.66, "nor_mean_speed_cms": 13.48, "nor_obj_loc_n_invest": 43.0, "nor_obj_loc_time_invest_s": 44.9, "nor_obj_loc_latency_s": 41.7, "nor_obj_area_time_s": 80.5, "kaofam_total_distance_cm": 3811.99, "kaofam_mean_speed_cms": 12.71, "kaofam_obj_loc_n_invest": 24.0, "kaofam_obj_loc_time_invest_s": 7.9, "kaofam_obj_loc_latency_s": 48.5, "kaofam_obj_area_time_s": 52.7, "sex": "F"}, {"rat": 26, "sex_wm": "F", "platform_lower_pct": 70.72222222222221, "departures_observed": 1, "head_turn_pre_deg_s": 68.66515239148337, "head_sweeps_per_min": 29.91689750692521, "vte_episodes_per_min": 1.4246141669964385, "distance_observed_cm": 1146.8268829438928, "speed_observed_cm_s": 26.588922232720083, "mean_latency_d1_5": 24.055, "probe_pct_on_platform": 73.33333333333333, "probe_dist_cm": 945.51, "epm_caz_entries": 15.0, "epm_caz_time_s": 184.3, "epm_caz_dist_m": 14.478, "epm_oaz_entries": 10.0, "epm_oaz_time_s": 68.1, "epm_oaz_dist_m": 6.21, "epm_center_entries": 25.0, "epm_ratio_time": 0.36950623982637, "of_distance_m": 2.771, "of_mean_speed_ms": 0.009, "of_wz_entries": 27.0, "of_wz_time_s": 211.4, "of_cz_entries": 12.0, "of_cz_time_s": 12.1, "nor_total_distance_cm": 5934.31, "nor_mean_speed_cms": 19.78, "nor_obj_loc_n_invest": 35.0, "nor_obj_loc_time_invest_s": 32.1, "nor_obj_loc_latency_s": 3.8, "nor_obj_area_time_s": 55.0, "kaofam_total_distance_cm": 5101.48, "kaofam_mean_speed_cms": 17.01, "kaofam_obj_loc_n_invest": 10.0, "kaofam_obj_loc_time_invest_s": 9.0, "kaofam_obj_loc_latency_s": 185.4, "kaofam_obj_area_time_s": 51.5, "sex": "F"}, {"rat": 27, "sex_wm": "F", "platform_lower_pct": 100.0, "departures_observed": 0, "head_turn_pre_deg_s": 61.81174609553089, "head_sweeps_per_min": 25.46689303904924, "vte_episodes_per_min": 0.5093378607809848, "distance_observed_cm": 317.9061046609727, "speed_observed_cm_s": null, "mean_latency_d1_5": 13.44, "probe_pct_on_platform": 100.0, "probe_dist_cm": 175.03, "epm_caz_entries": 15.0, "epm_caz_time_s": 188.7, "epm_caz_dist_m": 14.747, "epm_oaz_entries": 11.0, "epm_oaz_time_s": 66.2, "epm_oaz_dist_m": 5.9, "epm_center_entries": 25.0, "epm_ratio_time": 0.3508214096449391, "of_distance_m": 2.423, "of_mean_speed_ms": 0.008, "of_wz_entries": 50.0, "of_wz_time_s": 211.3, "of_cz_entries": 6.0, "of_cz_time_s": 7.0, "nor_total_distance_cm": 4276.22, "nor_mean_speed_cms": 14.25, "nor_obj_loc_n_invest": 46.0, "nor_obj_loc_time_invest_s": 27.5, "nor_obj_loc_latency_s": 46.0, "nor_obj_area_time_s": 60.9, "kaofam_total_distance_cm": 4704.49, "kaofam_mean_speed_cms": 15.68, "kaofam_obj_loc_n_invest": 16.0, "kaofam_obj_loc_time_invest_s": 8.2, "kaofam_obj_loc_latency_s": 72.4, "kaofam_obj_area_time_s": 49.1, "sex": "F"}, {"rat": 28, "sex_wm": "F", "platform_lower_pct": 69.77777777777779, "departures_observed": 4, "head_turn_pre_deg_s": 76.14085345085407, "head_sweeps_per_min": 31.14688128772636, "vte_episodes_per_min": 2.1730382293762576, "distance_observed_cm": 1575.0279957725456, "speed_observed_cm_s": 33.08184802306507, "mean_latency_d1_5": 16.28333333333333, "probe_pct_on_platform": 68.75, "probe_dist_cm": 1205.41, "epm_caz_entries": 14.0, "epm_caz_time_s": 208.3, "epm_caz_dist_m": 14.187, "epm_oaz_entries": 7.0, "epm_oaz_time_s": 42.8, "epm_oaz_dist_m": 2.626, "epm_center_entries": 21.0, "epm_ratio_time": 0.2054728756601055, "of_distance_m": 2.492, "of_mean_speed_ms": 0.008, "of_wz_entries": 33.0, "of_wz_time_s": 225.0, "of_cz_entries": 7.0, "of_cz_time_s": 12.2, "nor_total_distance_cm": 4054.54, "nor_mean_speed_cms": 13.52, "nor_obj_loc_n_invest": 31.0, "nor_obj_loc_time_invest_s": 46.1, "nor_obj_loc_latency_s": 18.2, "nor_obj_area_time_s": 78.2, "kaofam_total_distance_cm": 3670.91, "kaofam_mean_speed_cms": 12.24, "kaofam_obj_loc_n_invest": 16.0, "kaofam_obj_loc_time_invest_s": 12.0, "kaofam_obj_loc_latency_s": 110.3, "kaofam_obj_area_time_s": 56.2, "sex": "F"}, {"rat": 29, "sex_wm": "F", "platform_lower_pct": 99.55555555555556, "departures_observed": 0, "head_turn_pre_deg_s": 72.56727395264205, "head_sweeps_per_min": 34.02151788310555, "vte_episodes_per_min": 4.710671706891538, "distance_observed_cm": 443.86546771174073, "speed_observed_cm_s": 51.848114125440006, "mean_latency_d1_5": 18.64, "probe_pct_on_platform": 90.58333333333331, "probe_dist_cm": 229.42, "epm_caz_entries": 22.0, "epm_caz_time_s": 208.2, "epm_caz_dist_m": 15.219, "epm_oaz_entries": 9.0, "epm_oaz_time_s": 77.7, "epm_oaz_dist_m": 5.44, "epm_center_entries": 31.0, "epm_ratio_time": 0.3731988472622479, "of_distance_m": 4.079, "of_mean_speed_ms": 0.014, "of_wz_entries": 46.0, "of_wz_time_s": 219.4, "of_cz_entries": 13.0, "of_cz_time_s": 11.4, "nor_total_distance_cm": 5408.43, "nor_mean_speed_cms": 18.03, "nor_obj_loc_n_invest": 33.0, "nor_obj_loc_time_invest_s": 35.6, "nor_obj_loc_latency_s": 14.8, "nor_obj_area_time_s": 54.4, "kaofam_total_distance_cm": 6319.32, "kaofam_mean_speed_cms": 21.06, "kaofam_obj_loc_n_invest": 30.0, "kaofam_obj_loc_time_invest_s": 14.7, "kaofam_obj_loc_latency_s": 188.9, "kaofam_obj_area_time_s": 65.9, "sex": "F"}, {"rat": 30, "sex_wm": "F", "platform_lower_pct": 67.36111111111111, "departures_observed": 4, "head_turn_pre_deg_s": 97.557699431383, "head_sweeps_per_min": 37.48406289842754, "vte_episodes_per_min": 5.354866128346791, "distance_observed_cm": 1570.90168132318, "speed_observed_cm_s": 30.79376215628926, "mean_latency_d1_5": 13.485, "probe_pct_on_platform": 61.833333333333336, "probe_dist_cm": 1183.0, "epm_caz_entries": 16.0, "epm_caz_time_s": 199.4, "epm_caz_dist_m": 14.17, "epm_oaz_entries": 23.0, "epm_oaz_time_s": 77.9, "epm_oaz_dist_m": 3.737, "epm_center_entries": 38.0, "epm_ratio_time": 0.3906720160481444, "of_distance_m": 2.686, "of_mean_speed_ms": 0.009, "of_wz_entries": 26.0, "of_wz_time_s": 205.8, "of_cz_entries": 8.0, "of_cz_time_s": 27.6, "nor_total_distance_cm": 2799.5, "nor_mean_speed_cms": 9.33, "nor_obj_loc_n_invest": 20.0, "nor_obj_loc_time_invest_s": 27.6, "nor_obj_loc_latency_s": 16.3, "nor_obj_area_time_s": 47.4, "kaofam_total_distance_cm": 3989.72, "kaofam_mean_speed_cms": 13.3, "kaofam_obj_loc_n_invest": 17.0, "kaofam_obj_loc_time_invest_s": 6.4, "kaofam_obj_loc_latency_s": 221.8, "kaofam_obj_area_time_s": 56.0, "sex": "F"}, {"rat": 31, "sex_wm": "F", "platform_lower_pct": 41.30555555555556, "departures_observed": 4, "head_turn_pre_deg_s": 84.23261268797188, "head_sweeps_per_min": 36.86006825938566, "vte_episodes_per_min": 2.4573378839590445, "distance_observed_cm": 2215.2910704388128, "speed_observed_cm_s": 28.527598959299915, "mean_latency_d1_5": 17.96, "probe_pct_on_platform": 39.41666666666666, "probe_dist_cm": 1905.07, "epm_caz_entries": 18.0, "epm_caz_time_s": 211.3, "epm_caz_dist_m": 20.513, "epm_oaz_entries": 8.0, "epm_oaz_time_s": 65.1, "epm_oaz_dist_m": 4.263, "epm_center_entries": 27.0, "epm_ratio_time": 0.3080927591102697, "of_distance_m": 4.97, "of_mean_speed_ms": 0.017, "of_wz_entries": 49.0, "of_wz_time_s": 221.6, "of_cz_entries": 25.0, "of_cz_time_s": 21.0, "nor_total_distance_cm": 6167.98, "nor_mean_speed_cms": 20.56, "nor_obj_loc_n_invest": 32.0, "nor_obj_loc_time_invest_s": 35.8, "nor_obj_loc_latency_s": 8.7, "nor_obj_area_time_s": 59.4, "kaofam_total_distance_cm": 6021.91, "kaofam_mean_speed_cms": 20.07, "kaofam_obj_loc_n_invest": 20.0, "kaofam_obj_loc_time_invest_s": 13.1, "kaofam_obj_loc_latency_s": 96.4, "kaofam_obj_area_time_s": 70.1, "sex": "F"}, {"rat": 32, "sex_wm": "F", "platform_lower_pct": 78.77777777777779, "departures_observed": 2, "head_turn_pre_deg_s": 99.081266107553, "head_sweeps_per_min": 46.1374154503382, "vte_episodes_per_min": 8.330366678533284, "distance_observed_cm": 1085.293920626035, "speed_observed_cm_s": 30.361000761203737, "mean_latency_d1_5": 17.565, "probe_pct_on_platform": 74.41666666666667, "probe_dist_cm": 844.97, "epm_caz_entries": 10.0, "epm_caz_time_s": 174.9, "epm_caz_dist_m": 14.957, "epm_oaz_entries": 13.0, "epm_oaz_time_s": 75.8, "epm_oaz_dist_m": 5.351, "epm_center_entries": 22.0, "epm_ratio_time": 0.4333905088622069, "of_distance_m": 2.345, "of_mean_speed_ms": 0.008, "of_wz_entries": 21.0, "of_wz_time_s": 199.7, "of_cz_entries": 8.0, "of_cz_time_s": 19.3, "nor_total_distance_cm": 4171.99, "nor_mean_speed_cms": 13.91, "nor_obj_loc_n_invest": 30.0, "nor_obj_loc_time_invest_s": 34.9, "nor_obj_loc_latency_s": 18.5, "nor_obj_area_time_s": 55.2, "kaofam_total_distance_cm": 4248.63, "kaofam_mean_speed_cms": 14.16, "kaofam_obj_loc_n_invest": 20.0, "kaofam_obj_loc_time_invest_s": 12.4, "kaofam_obj_loc_latency_s": 97.8, "kaofam_obj_area_time_s": 63.2, "sex": "F"}];
+const TOP5        = [{"group": "All", "beh_measure": "of_cz_entries", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.6591, "p_value": 0.0001, "sig": "**", "abs_r": 0.6591}, {"group": "All", "beh_measure": "of_cz_time_s", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.653, "p_value": 0.00012, "sig": "**", "abs_r": 0.653}, {"group": "All", "beh_measure": "of_cz_entries", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.6524, "p_value": 0.00013, "sig": "**", "abs_r": 0.6524}, {"group": "All", "beh_measure": "of_distance_m", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.6488, "p_value": 0.00014, "sig": "**", "abs_r": 0.6488}, {"group": "All", "beh_measure": "of_distance_m", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.6486, "p_value": 0.00014, "sig": "**", "abs_r": 0.6486}];
+const SIG_ALL     = [{"group": "All", "beh_measure": "of_cz_entries", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.6591, "p_value": 0.0001, "sig": "**", "abs_r": 0.6591}, {"group": "All", "beh_measure": "of_cz_time_s", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.653, "p_value": 0.00012, "sig": "**", "abs_r": 0.653}, {"group": "All", "beh_measure": "of_cz_entries", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.6524, "p_value": 0.00013, "sig": "**", "abs_r": 0.6524}, {"group": "All", "beh_measure": "of_distance_m", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.6488, "p_value": 0.00014, "sig": "**", "abs_r": 0.6488}, {"group": "All", "beh_measure": "of_distance_m", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.6486, "p_value": 0.00014, "sig": "**", "abs_r": 0.6486}, {"group": "All", "beh_measure": "of_cz_time_s", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.641, "p_value": 0.00018, "sig": "**", "abs_r": 0.641}, {"group": "All", "beh_measure": "of_cz_time_s", "wm_measure": "departures_observed", "n": 29, "spearman_r": 0.6127, "p_value": 0.00041, "sig": "**", "abs_r": 0.6127}, {"group": "All", "beh_measure": "of_cz_entries", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.6091, "p_value": 0.00045, "sig": "**", "abs_r": 0.6091}, {"group": "All", "beh_measure": "nor_obj_loc_time_invest_s", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.6003, "p_value": 0.00058, "sig": "**", "abs_r": 0.6003}, {"group": "All", "beh_measure": "nor_obj_loc_n_invest", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.5792, "p_value": 0.00099, "sig": "**", "abs_r": 0.5792}, {"group": "All", "beh_measure": "of_distance_m", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.5734, "p_value": 0.00115, "sig": "**", "abs_r": 0.5734}, {"group": "All", "beh_measure": "of_cz_time_s", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.5648, "p_value": 0.00141, "sig": "**", "abs_r": 0.5648}, {"group": "All", "beh_measure": "nor_obj_loc_time_invest_s", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.5474, "p_value": 0.00212, "sig": "**", "abs_r": 0.5474}, {"group": "All", "beh_measure": "nor_obj_loc_time_invest_s", "wm_measure": "departures_observed", "n": 29, "spearman_r": 0.5413, "p_value": 0.00243, "sig": "**", "abs_r": 0.5413}, {"group": "All", "beh_measure": "kaofam_total_distance_cm", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.5296, "p_value": 0.00313, "sig": "**", "abs_r": 0.5296}, {"group": "All", "beh_measure": "nor_obj_loc_n_invest", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.5284, "p_value": 0.00321, "sig": "**", "abs_r": 0.5284}, {"group": "All", "beh_measure": "of_mean_speed_ms", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.5267, "p_value": 0.00333, "sig": "**", "abs_r": 0.5267}, {"group": "All", "beh_measure": "of_cz_entries", "wm_measure": "departures_observed", "n": 29, "spearman_r": 0.525, "p_value": 0.00345, "sig": "**", "abs_r": 0.525}, {"group": "All", "beh_measure": "nor_obj_loc_time_invest_s", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.5202, "p_value": 0.00382, "sig": "**", "abs_r": 0.5202}, {"group": "All", "beh_measure": "kaofam_total_distance_cm", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.5201, "p_value": 0.00383, "sig": "**", "abs_r": 0.5201}, {"group": "All", "beh_measure": "nor_total_distance_cm", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.516, "p_value": 0.00416, "sig": "**", "abs_r": 0.516}, {"group": "All", "beh_measure": "kaofam_obj_loc_n_invest", "wm_measure": "mean_latency_d1_5", "n": 29, "spearman_r": -0.4978, "p_value": 0.00599, "sig": "**", "abs_r": 0.4978}, {"group": "All", "beh_measure": "of_mean_speed_ms", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.4963, "p_value": 0.00618, "sig": "**", "abs_r": 0.4963}, {"group": "All", "beh_measure": "nor_obj_loc_n_invest", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.4957, "p_value": 0.00625, "sig": "**", "abs_r": 0.4957}, {"group": "All", "beh_measure": "of_distance_m", "wm_measure": "departures_observed", "n": 29, "spearman_r": 0.4886, "p_value": 0.00716, "sig": "**", "abs_r": 0.4886}, {"group": "All", "beh_measure": "kaofam_total_distance_cm", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.4823, "p_value": 0.00806, "sig": "**", "abs_r": 0.4823}, {"group": "All", "beh_measure": "of_cz_time_s", "wm_measure": "head_turn_pre_deg_s", "n": 27, "spearman_r": 0.4814, "p_value": 0.01102, "sig": "*", "abs_r": 0.4814}, {"group": "All", "beh_measure": "nor_total_distance_cm", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.4778, "p_value": 0.00875, "sig": "**", "abs_r": 0.4778}, {"group": "All", "beh_measure": "nor_obj_loc_n_invest", "wm_measure": "departures_observed", "n": 29, "spearman_r": 0.4758, "p_value": 0.00909, "sig": "**", "abs_r": 0.4758}, {"group": "All", "beh_measure": "nor_obj_area_time_s", "wm_measure": "platform_lower_pct", "n": 29, "spearman_r": -0.4694, "p_value": 0.01021, "sig": "*", "abs_r": 0.4694}, {"group": "All", "beh_measure": "nor_obj_area_time_s", "wm_measure": "departures_observed", "n": 29, "spearman_r": 0.4584, "p_value": 0.01239, "sig": "*", "abs_r": 0.4584}, {"group": "All", "beh_measure": "of_cz_entries", "wm_measure": "head_turn_pre_deg_s", "n": 27, "spearman_r": 0.4554, "p_value": 0.01698, "sig": "*", "abs_r": 0.4554}, {"group": "All", "beh_measure": "nor_obj_loc_time_invest_s", "wm_measure": "head_turn_pre_deg_s", "n": 27, "spearman_r": 0.453, "p_value": 0.01765, "sig": "*", "abs_r": 0.453}, {"group": "All", "beh_measure": "of_mean_speed_ms", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.4339, "p_value": 0.01868, "sig": "*", "abs_r": 0.4339}, {"group": "All", "beh_measure": "of_distance_m", "wm_measure": "head_turn_pre_deg_s", "n": 27, "spearman_r": 0.428, "p_value": 0.02595, "sig": "*", "abs_r": 0.428}, {"group": "All", "beh_measure": "epm_oaz_entries", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": -0.4253, "p_value": 0.02146, "sig": "*", "abs_r": 0.4253}, {"group": "All", "beh_measure": "epm_oaz_entries", "wm_measure": "head_turn_pre_deg_s", "n": 27, "spearman_r": -0.4165, "p_value": 0.03067, "sig": "*", "abs_r": 0.4165}, {"group": "All", "beh_measure": "nor_obj_area_time_s", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.4089, "p_value": 0.02764, "sig": "*", "abs_r": 0.4089}, {"group": "All", "beh_measure": "nor_total_distance_cm", "wm_measure": "probe_pct_on_platform", "n": 29, "spearman_r": -0.4053, "p_value": 0.02915, "sig": "*", "abs_r": 0.4053}, {"group": "All", "beh_measure": "kaofam_obj_loc_time_invest_s", "wm_measure": "mean_latency_d1_5", "n": 29, "spearman_r": -0.3941, "p_value": 0.03438, "sig": "*", "abs_r": 0.3941}, {"group": "All", "beh_measure": "nor_obj_loc_n_invest", "wm_measure": "head_turn_pre_deg_s", "n": 27, "spearman_r": 0.3925, "p_value": 0.04287, "sig": "*", "abs_r": 0.3925}, {"group": "All", "beh_measure": "nor_obj_area_time_s", "wm_measure": "head_sweeps_per_min", "n": 29, "spearman_r": 0.3897, "p_value": 0.03664, "sig": "*", "abs_r": 0.3897}, {"group": "All", "beh_measure": "of_mean_speed_ms", "wm_measure": "departures_observed", "n": 29, "spearman_r": 0.3828, "p_value": 0.04041, "sig": "*", "abs_r": 0.3828}];
+const SCATTER_FILES = ["scatter_departures_observed_x_epm_oaz_time_s.png", "scatter_departures_observed_x_epm_ratio_time.png", "scatter_departures_observed_x_kaofam_obj_loc_time_invest_s.png", "scatter_departures_observed_x_of_distance_m.png", "scatter_head_sweeps_per_min_x_nor_obj_loc_n_invest.png", "scatter_head_turn_pre_deg_s_x_epm_oaz_time_s.png", "scatter_head_turn_pre_deg_s_x_of_distance_m.png", "scatter_mean_latency_d1_5_x_epm_ratio_time.png", "scatter_platform_lower_pct_x_epm_ratio_time.png", "scatter_platform_lower_pct_x_nor_obj_area_time_s.png", "scatter_platform_lower_pct_x_of_distance_m.png", "scatter_vte_episodes_per_min_x_nor_obj_loc_time_invest_s.png"];
+
+// ── Column display names ─────────────────────────────────────────────────────
+const COL_LABELS = {
+  rat:"Rat", sex:"Sex", sex_wm:"Sex",
+  platform_lower_pct:"Platform %",
+  departures_observed:"Departures",
+  head_turn_pre_deg_s:"Head turn °/s",
+  head_sweeps_per_min:"Head sweeps/min",
+  vte_episodes_per_min:"VTE/min",
+  distance_observed_cm:"WM dist (cm)",
+  speed_observed_cm_s:"WM speed",
+  mean_latency_d1_5:"Latency d1-5",
+  probe_pct_on_platform:"Probe %",
+  probe_dist_cm:"Probe dist",
+  epm_caz_entries:"EPM CAZ entries",
+  epm_caz_time_s:"EPM CAZ time",
+  epm_caz_dist_m:"EPM CAZ dist",
+  epm_oaz_entries:"EPM OAZ entries",
+  epm_oaz_time_s:"EPM OAZ time",
+  epm_oaz_dist_m:"EPM OAZ dist",
+  epm_center_entries:"EPM Center entries",
+  epm_ratio_time:"EPM ratio time",
+  of_distance_m:"OF dist (m)",
+  of_mean_speed_ms:"OF speed (m/s)",
+  of_wz_entries:"OF wall entries",
+  of_wz_time_s:"OF wall time",
+  of_cz_entries:"OF centre entries",
+  of_cz_time_s:"OF centre time",
+  nor_total_distance_cm:"NOR dist (cm)",
+  nor_mean_speed_cms:"NOR speed",
+  nor_obj_loc_n_invest:"NOR # invest.",
+  nor_obj_loc_time_invest_s:"NOR invest. time",
+  nor_obj_loc_latency_s:"NOR latency",
+  nor_obj_area_time_s:"NOR obj area time",
+  kaofam_total_distance_cm:"KAOFam dist (cm)",
+  kaofam_mean_speed_cms:"KAOFam speed",
+  kaofam_obj_loc_n_invest:"KAOFam # invest.",
+  kaofam_obj_loc_time_invest_s:"KAOFam invest. time",
+  kaofam_obj_loc_latency_s:"KAOFam latency",
+  kaofam_obj_area_time_s:"KAOFam obj area time",
+};
+
+const BEH_LABELS = {
+  epm_oaz_time_s:"EPM: Open arm time (s)",
+  epm_ratio_time:"EPM: OAZ ratio time",
+  epm_oaz_entries:"EPM: Open arm entries",
+  epm_caz_time_s:"EPM: Closed arm time (s)",
+  epm_center_entries:"EPM: Center entries",
+  of_distance_m:"OF: Total distance (m)",
+  of_mean_speed_ms:"OF: Mean speed (m/s)",
+  of_cz_time_s:"OF: Center time (s)",
+  of_wz_time_s:"OF: Wall time (s)",
+  of_cz_entries:"OF: Center entries",
+  nor_obj_loc_n_invest:"NOR-Feb: # investigations",
+  nor_obj_loc_time_invest_s:"NOR-Feb: Invest. time (s)",
+  nor_obj_loc_latency_s:"NOR-Feb: Latency (s)",
+  nor_obj_area_time_s:"NOR-Feb: Obj area time (s)",
+  nor_total_distance_cm:"NOR-Feb: Distance (cm)",
+  kaofam_obj_loc_n_invest:"KAOFam: # investigations",
+  kaofam_obj_loc_time_invest_s:"KAOFam: Invest. time (s)",
+  kaofam_obj_loc_latency_s:"KAOFam: Latency (s)",
+  kaofam_obj_area_time_s:"KAOFam: Obj area time (s)",
+  kaofam_total_distance_cm:"KAOFam: Distance (cm)",
+};
+const WM_LABELS = {
+  platform_lower_pct:"% Platform time",
+  departures_observed:"Departures observed",
+  head_turn_pre_deg_s:"Head-turn speed (°/s)",
+  head_sweeps_per_min:"Head sweeps/min",
+  vte_episodes_per_min:"VTE episodes/min",
+  mean_latency_d1_5:"Mean latency (days 1-5)",
+  probe_pct_on_platform:"Probe % on platform",
+};
+
+// ── KPI strip ────────────────────────────────────────────────────────────────
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("kpi-n").textContent = MERGED_ROWS.length;
+  document.getElementById("kpi-sig").textContent = SIG_ALL.length;
+  document.getElementById("kpi-r").textContent = SIG_ALL.length > 0
+    ? SIG_ALL[0].spearman_r.toFixed(3) : "—";
+  const epmSig = SIG_ALL.filter(d => d.beh_measure.startsWith("epm_"));
+  document.getElementById("kpi-epm").textContent = epmSig.length;
+
+  // Top 5 list
+  const ul = document.getElementById("top5-list");
+  TOP5.forEach(d => {
+    const li = document.createElement("li");
+    const bLbl = BEH_LABELS[d.beh_measure] || d.beh_measure;
+    const wLbl = WM_LABELS[d.wm_measure]   || d.wm_measure;
+    const rSign = d.spearman_r > 0 ? "+" : "";
+    li.innerHTML = `<strong>${bLbl}</strong> × <em>${wLbl}</em>: 
+      r = ${rSign}${d.spearman_r.toFixed(3)}, p = ${d.p_value.toFixed(5)}
+      <span class="sig-badge">${d.sig}</span>`;
+    ul.appendChild(li);
+  });
+
+  // Scatter grid
+  const sg = document.getElementById("scatter-grid");
+  // Prioritise significant ones
+  const sigScatterOrder = [
+    "scatter_platform_lower_pct_x_of_distance_m.png",
+    "scatter_departures_observed_x_of_distance_m.png",
+    "scatter_head_sweeps_per_min_x_nor_obj_loc_n_invest.png",
+    "scatter_head_turn_pre_deg_s_x_of_distance_m.png",
+    "scatter_platform_lower_pct_x_nor_obj_area_time_s.png",
+    "scatter_departures_observed_x_epm_ratio_time.png",
+    "scatter_platform_lower_pct_x_epm_ratio_time.png",
+    "scatter_departures_observed_x_epm_oaz_time_s.png",
+    "scatter_head_turn_pre_deg_s_x_epm_oaz_time_s.png",
+    "scatter_mean_latency_d1_5_x_epm_ratio_time.png",
+    "scatter_vte_episodes_per_min_x_nor_obj_loc_time_invest_s.png",
+    "scatter_departures_observed_x_kaofam_obj_loc_time_invest_s.png",
+  ];
+  const ordered = [...new Set([...sigScatterOrder, ...SCATTER_FILES])];
+  ordered.forEach(fname => {
+    if (!SCATTER_FILES.includes(fname)) return;
+    const fig = document.createElement("figure");
+    fig.className = "scatter-fig";
+    // Find r,p from sig table
+    const base = fname.replace("scatter_","").replace(".png","");
+    const parts = base.split("_x_");
+    let rp = "";
+    if (parts.length === 2) {
+      const wmCol = parts[0], bmCol = parts[1];
+      const hit = SIG_ALL.find(d => d.wm_measure === wmCol && d.beh_measure === bmCol);
+      if (hit) rp = ` · r = ${hit.spearman_r.toFixed(3)}, p = ${hit.p_value.toFixed(4)} ${hit.sig}`;
+    }
+    const wLbl = WM_LABELS[parts[0]] || parts[0].replace(/_/g," ");
+    const bLbl = BEH_LABELS[parts[1]] || (parts[1]||"").replace(/_/g," ");
+    fig.innerHTML = `<div class="img"><img src="figures/${fname}" alt="${fname}" loading="lazy"></div>
+      <figcaption><b>${wLbl} × ${bLbl}</b>${rp}</figcaption>`;
+    sg.appendChild(fig);
+  });
+
+  // Sig table
+  renderSigTable();
+
+  // Main table
+  buildTableHeader();
+  renderTable();
+});
+
+// ── Tab switching ─────────────────────────────────────────────────────────────
+function switchTab(e, id) {
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".tab-content").forEach(t => t.classList.remove("active"));
+  e.currentTarget.classList.add("active");
+  document.getElementById(id).classList.add("active");
+}
+
+// ── Sig table ─────────────────────────────────────────────────────────────────
+let sigSortCol = 5, sigSortAsc = false;
+function renderSigTable() {
+  const tbody = document.getElementById("sig-tbody");
+  const data  = [...SIG_ALL];
+  data.sort((a, b) => {
+    const vals = [
+      [a.beh_measure, b.beh_measure],
+      [a.wm_measure,  b.wm_measure],
+      [a.n,           b.n],
+      [a.spearman_r,  b.spearman_r],
+      [a.p_value,     b.p_value],
+      [a.abs_r,       b.abs_r],
+    ];
+    const [av, bv] = vals[sigSortCol];
+    const cmp = (av == null ? -Infinity : av) < (bv == null ? -Infinity : bv) ? -1
+      : (av == null ? -Infinity : av) > (bv == null ? -Infinity : bv) ? 1 : 0;
+    return sigSortAsc ? cmp : -cmp;
+  });
+  const rDir = v => v > 0 ? `+${v.toFixed(3)}` : v.toFixed(3);
+  tbody.innerHTML = data.map(d => {
+    const rStyle = d.spearman_r > 0
+      ? "color:var(--m);font-weight:600"
+      : "color:var(--f);font-weight:600";
+    const bLbl = BEH_LABELS[d.beh_measure] || d.beh_measure;
+    const wLbl = WM_LABELS[d.wm_measure]   || d.wm_measure;
+    return `<tr>
+      <td>${bLbl}</td>
+      <td>${wLbl}</td>
+      <td>${d.n}</td>
+      <td style="${rStyle}">${rDir(d.spearman_r)}</td>
+      <td>${d.p_value.toFixed(5)} <span class="sig-badge">${d.sig}</span></td>
+      <td>${d.abs_r.toFixed(4)}</td>
+    </tr>`;
+  }).join("");
+}
+function sortSigTable(col) {
+  if (sigSortCol === col) sigSortAsc = !sigSortAsc;
+  else { sigSortCol = col; sigSortAsc = false; }
+  document.querySelectorAll("#sig-table thead th").forEach((th, i) => {
+    th.classList.toggle("sorted-asc", i === col && sigSortAsc);
+    th.classList.toggle("sorted-desc", i === col && !sigSortAsc);
+  });
+  renderSigTable();
+}
+
+// ── Main per-rat table ────────────────────────────────────────────────────────
+const DISPLAY_COLS = [
+  "rat","sex","platform_lower_pct","departures_observed",
+  "head_turn_pre_deg_s","head_sweeps_per_min","vte_episodes_per_min",
+  "mean_latency_d1_5","probe_pct_on_platform",
+  "epm_oaz_time_s","epm_ratio_time","epm_oaz_entries","epm_center_entries",
+  "of_distance_m","of_mean_speed_ms","of_cz_entries","of_cz_time_s",
+  "nor_obj_loc_n_invest","nor_obj_loc_time_invest_s","nor_obj_area_time_s",
+  "kaofam_obj_loc_n_invest","kaofam_obj_loc_time_invest_s","kaofam_total_distance_cm",
+];
+let tableSortCol = 0, tableSortAsc = true;
+
+function buildTableHeader() {
+  const thead = document.getElementById("main-thead");
+  const tr = document.createElement("tr");
+  DISPLAY_COLS.forEach((col, i) => {
+    const th = document.createElement("th");
+    th.innerHTML = `${COL_LABELS[col]||col}<span class="sort-arrow"></span>`;
+    th.dataset.col = i;
+    if (i === 0) th.classList.add("sorted-asc");
+    th.addEventListener("click", () => {
+      if (tableSortCol === i) tableSortAsc = !tableSortAsc;
+      else { tableSortCol = i; tableSortAsc = true; }
+      document.querySelectorAll("#main-thead th").forEach((h, j) => {
+        h.classList.toggle("sorted-asc", j === i && tableSortAsc);
+        h.classList.toggle("sorted-desc", j === i && !tableSortAsc);
+      });
+      renderTable();
+    });
+    tr.appendChild(th);
+  });
+  thead.appendChild(tr);
+}
+
+function renderTable() {
+  const sexF  = document.getElementById("sex-filter").value;
+  const query = (document.getElementById("search-box").value || "").toLowerCase();
+  let data = MERGED_ROWS.filter(r => {
+    if (sexF !== "all" && r.sex !== sexF) return false;
+    if (query) {
+      return DISPLAY_COLS.some(c => String(r[c] ?? "").toLowerCase().includes(query));
+    }
+    return true;
+  });
+  data.sort((a, b) => {
+    const col = DISPLAY_COLS[tableSortCol];
+    const av = a[col], bv = b[col];
+    const cmp = (av == null ? -Infinity : av) < (bv == null ? -Infinity : bv) ? -1
+      : (av == null ? -Infinity : av) > (bv == null ? -Infinity : bv) ? 1 : 0;
+    return tableSortAsc ? cmp : -cmp;
+  });
+  const tbody = document.getElementById("main-tbody");
+  tbody.innerHTML = data.map(r => {
+    const sexClass = r.sex === "M" ? "sex-m" : "sex-f";
+    return "<tr>" + DISPLAY_COLS.map((col, i) => {
+      const val = r[col];
+      if (col === "sex" || col === "sex_wm") {
+        return `<td class="${sexClass}">${val ?? "—"}</td>`;
+      }
+      if (col === "rat") return `<td style="font-weight:600">${val ?? "—"}</td>`;
+      if (val == null) return `<td style="color:var(--ns)">—</td>`;
+      const num = typeof val === "number" ? val.toFixed(3) : val;
+      return `<td>${num}</td>`;
+    }).join("") + "</tr>";
+  }).join("");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "body_confidence": 0.3,
+  "head_confidence": 0.6,
+  "tail_confidence": 0.5,
+  "false_spots": {
+    "kac_d6": [
+      310,
+      210
+    ],
+    "kac_d8": [
+      870,
+      50
+    ]
+  },
+  "spot_radius_px": 40,
+  "outer_radius_fraction": 0.98,
+  "speed_cutoff_cm_s": 60,
+  "speed_sensitivity": [
+    40,
+    100,
+    150
+  ],
+  "max_interpolated_gap_s": 0.5,
+  "unknown_time": "excluded from observed-time denominator; full-trial bounds reported",
+  "caution": "These thresholds are QC assumptions, not validated limits on rat motion.",
+  "primary_kac_model": "KAcheck_d6d8_v3rot_20261108 best-320 (rotation augmentation, 13 points) on both days",
+  "sp1_model": "best-190",
+  "sp1_pool_scale": "172 cm assumed; SP1 distances approximate"
+}

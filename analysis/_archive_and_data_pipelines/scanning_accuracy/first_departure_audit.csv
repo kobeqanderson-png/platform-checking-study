@@ -1,0 +1,92 @@
+cond,rat,sex,model,included,reason,scanning_deg_s,head_sweeps_per_valid_min,heading_error_deg,progress_per_path,initial_straightness,path_cm,outbound_seconds,interpolated_pct,first_departure_s,head_pair_coverage_pct,head_sweep_count
+kac_d6,2,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,3,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,4,M,best-320,True,usable first departure,86.11146887396131,48.97959183673469,156.88864397662306,-0.15130794073651657,0.24534903055557994,107.69950536552555,5.0,7.28476821192053,7.833333333333333,95.9731543624161,4.0
+kac_d6,5,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,6,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,7,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,8,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,9,M,best-320,False,fewer than 5 continuously on-platform seconds before departure,,,,,,,,,0.7,,
+kac_d6,10,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,12,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,13,M,best-320,True,usable first departure,52.988363616085486,24.0,124.2161002807983,0.3290474010524164,0.5667037827076268,155.40763396249565,5.0,10.596026490066226,73.23333333333333,100.0,2.0
+kac_d6,14,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,15,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,16,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,17,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,31.066666666666666,,
+kac_d6,18,F,best-320,True,usable first departure,97.17923417870526,36.241610738255034,163.27370381656627,0.1814385434514162,0.2648090261527058,85.76567080108713,3.066666666666667,9.67741935483871,14.266666666666667,98.65771812080537,3.0
+kac_d6,20,F,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,21,F,best-320,False,fewer than 5 continuously on-platform seconds before departure,,,,,,,,,2.533333333333333,,
+kac_d6,22,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,86.7,,
+kac_d6,23,F,best-320,True,usable first departure,74.87675187293421,36.241610738255034,142.3348913887973,-0.06716132307510196,0.2891067461587428,114.04417106931604,5.0,5.298013245033113,99.3,98.65771812080537,3.0
+kac_d6,24,F,best-320,True,usable first departure,61.35828936072867,24.0,115.04069380821407,0.42191511566843715,0.4348451975150918,140.55673083823484,4.366666666666666,21.21212121212121,15.9,100.0,2.0
+kac_d6,25,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,13.666666666666666,,
+kac_d6,26,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,85.93333333333334,,
+kac_d6,27,F,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,28,F,best-320,True,usable first departure,77.45817070372995,24.0,104.4455120813556,0.44438779042202886,0.5222156795092572,141.69710245709518,4.0,31.40495867768595,56.5,100.0,2.0
+kac_d6,29,F,best-320,False,no observed departure,,,,,,,,,,,
+kac_d6,30,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,26.733333333333334,,
+kac_d6,31,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,28.466666666666665,,
+kac_d6,32,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,58.8,,
+kac_d8,1,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,2,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,3,M,best-320,True,usable first departure,68.53275068524641,48.0,12.757120784700835,0.9003935514001249,0.9825671647348335,46.317282257973254,1.7,0.0,86.7,100.0,4.0
+kac_d8,4,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,5,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,6,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,7,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,8,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,9,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,10,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,12,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,13,M,best-320,True,usable first departure,52.25842036427809,0.0,62.125131375371915,0.36625107136925716,0.4468286341340808,131.13609511308098,3.966666666666667,29.166666666666668,75.33333333333333,100.0,0.0
+kac_d8,14,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,15,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,16,M,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,17,F,best-320,True,usable first departure,98.77405934613331,48.0,46.430223160711314,0.20726552695742814,0.2695817344513939,150.60407762741326,5.0,33.77483443708609,8.633333333333333,100.0,4.0
+kac_d8,18,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,10.666666666666666,,
+kac_d8,20,F,best-320,True,usable first departure,46.324119099766484,12.0,116.40911036984164,0.23285518244171832,0.6330930432666667,155.86007812176098,5.0,8.609271523178808,96.1,100.0,1.0
+kac_d8,21,F,best-320,False,fewer than 5 continuously on-platform seconds before departure,,,,,,,,,0.3333333333333333,,
+kac_d8,22,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,59.56666666666667,,
+kac_d8,23,F,best-320,True,usable first departure,69.62686838977493,36.0,93.11153308167009,0.49437207380404513,0.5462786200565455,118.32408501094513,3.4,25.24271844660194,51.06666666666667,100.0,3.0
+kac_d8,24,F,best-320,True,usable first departure,68.39638744009586,36.0,65.02117205985124,0.2717790452289619,0.5440492659094942,157.33160769816612,5.0,17.880794701986755,74.36666666666666,100.0,3.0
+kac_d8,25,F,best-320,False,fewer than 5 continuously on-platform seconds before departure,,,,,,,,,2.066666666666667,,
+kac_d8,26,F,best-320,False,no observed departure,,,,,,,,,,,
+kac_d8,27,F,best-320,True,usable first departure,67.83956277989928,24.0,6.163165634937547,0.9680083088183922,0.9791470230507194,42.95775150837513,1.1,38.23529411764706,88.9,100.0,2.0
+kac_d8,28,F,best-320,True,usable first departure,97.08342251380891,72.0,127.76445429792199,0.020522165189164,0.11649583217570049,158.9120735512451,5.0,11.920529801324504,8.266666666666667,100.0,6.0
+kac_d8,29,F,best-320,False,fewer than 5 continuously on-platform seconds before departure,,,,,,,,,0.7,,
+kac_d8,30,F,best-320,True,usable first departure,94.84154002743908,48.0,15.299130983979245,-0.22096912120037734,0.23516320892789583,109.6715114230498,3.7666666666666666,11.403508771929824,6.4,100.0,4.0
+kac_d8,31,F,best-320,False,fewer than 5 continuously on-platform seconds before departure,,,,,,,,,3.8,,
+kac_d8,32,F,best-320,False,first departure uncertain due to earlier tracking gap,,,,,,,,,6.9,,
+sp1,1,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,2,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,3,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,4,M,best-190,True,usable first departure,24.628480510636514,24.0,3.423888811539773,0.9662020032772737,0.9798491350578248,50.99976319153029,2.0,0.0,102.5,100.0,2.0
+sp1,5,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,6,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,7,M,best-190,False,first departure uncertain due to earlier tracking gap,,,,,,,,,117.3,,
+sp1,8,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,9,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,10,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,11,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,12,M,best-190,True,usable first departure,44.135273564461514,24.0,168.355359755482,0.05902897768243729,0.7538665995719224,96.19776414186748,5.0,7.8431372549019605,110.5,100.0,2.0
+sp1,13,M,best-190,True,usable first departure,28.139549798684325,12.0,26.789827533228234,0.7388862769017341,0.9622148185991888,62.45678645108208,2.2,8.695652173913043,102.1,100.0,1.0
+sp1,14,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,15,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,16,M,best-190,False,no observed departure,,,,,,,,,,,
+sp1,17,F,best-190,True,usable first departure,51.902422510244726,12.0,1.051583346444672,0.9281213242597997,0.9830530583980237,49.73428233517054,2.5,15.384615384615385,40.4,100.0,1.0
+sp1,18,F,best-190,True,usable first departure,63.45708844112038,48.0,1.2674225253464901,0.21814298644296565,0.49273045941825955,78.34942108410583,5.0,0.0,13.9,100.0,4.0
+sp1,19,F,best-190,False,initial swim shorter than 1 s or interrupted by tracking gap,62.34677803092546,48.0,,,,,,,21.0,100.0,4.0
+sp1,20,F,best-190,True,usable first departure,94.55104481798982,60.0,30.37001663048269,0.8080216884449899,0.8688503504869609,60.740588662353495,2.0,19.047619047619047,7.6,100.0,5.0
+sp1,21,F,best-190,True,usable first departure,77.90134730829011,48.0,9.425578064764203,0.9581025821058842,0.996881673304443,48.70070599826263,1.4,20.0,98.7,100.0,4.0
+sp1,22,F,best-190,False,no observed departure,,,,,,,,,,,
+sp1,23,F,best-190,False,no observed departure,,,,,,,,,,,
+sp1,24,F,best-190,True,usable first departure,64.95080483902777,36.0,147.6978109898803,0.13021238411358252,0.19048510358608997,50.753429843325705,2.5,7.6923076923076925,32.0,100.0,3.0
+sp1,25,F,best-190,False,no observed departure,,,,,,,,,,,
+sp1,26,F,best-190,False,first departure uncertain due to earlier tracking gap,,,,,,,,,102.0,,
+sp1,27,F,best-190,True,usable first departure,103.0254238871859,72.0,159.9290113403022,-0.03424734713716111,0.6119691710026727,92.36561428845937,5.0,3.9215686274509802,20.4,100.0,6.0
+sp1,28,F,best-190,True,usable first departure,51.51044349876716,24.0,146.1965636888613,0.459322969906603,0.6583056901025442,127.46948630191298,5.0,7.8431372549019605,6.5,100.0,2.0
+sp1,29,F,best-190,True,usable first departure,76.59904019687671,36.0,170.02754401842213,0.40016441478738435,0.44859205287207066,75.68876024091102,5.0,3.9215686274509802,40.5,100.0,3.0
+sp1,30,F,best-190,False,no observed departure,,,,,,,,,,,
+sp1,31,F,best-190,True,usable first departure,87.90237040969659,48.0,15.026265398560952,0.9471904189466797,0.9746017613434412,53.308482466644605,2.0,14.285714285714285,17.6,100.0,4.0
+sp1,32,F,best-190,True,usable first departure,80.47915916960352,36.0,3.0155950872439243,0.9742237311826626,0.9946023083196734,48.97860300771878,1.6,11.76470588235294,76.6,100.0,3.0

@@ -1,0 +1,16 @@
+zone,min_bout_s,condition,females_left,males_left,fisher_p
+100% zone,1.0,SP1 raised,12/16,4/16,0.01211
+100% zone,1.0,KAC standard (1.5 cm),12/15,3/14,0.00281
+100% zone,1.0,KAC raised (3 cm),14/15,2/15,2e-05
+80% zone,1.0,SP1 raised,12/16,4/16,0.01211
+80% zone,1.0,KAC standard (1.5 cm),12/15,3/14,0.00281
+80% zone,1.0,KAC raised (3 cm),14/15,2/15,2e-05
+120% zone,1.0,SP1 raised,12/16,4/16,0.01211
+120% zone,1.0,KAC standard (1.5 cm),12/15,3/14,0.00281
+120% zone,1.0,KAC raised (3 cm),14/15,2/15,2e-05
+100% zone,0.5,SP1 raised,12/16,4/16,0.01211
+100% zone,0.5,KAC standard (1.5 cm),14/15,3/14,0.00012
+100% zone,0.5,KAC raised (3 cm),14/15,2/15,2e-05
+100% zone,2.0,SP1 raised,12/16,4/16,0.01211
+100% zone,2.0,KAC standard (1.5 cm),12/15,3/14,0.00281
+100% zone,2.0,KAC raised (3 cm),14/15,2/15,2e-05

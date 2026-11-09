@@ -1,0 +1,132 @@
+cohort,day,condition,rat,sex,bout,start_s,off_s,returned,max_dist_cm,reached_wall,pct_bout_within_30cm
+KAC,8,KAC raised (3 cm),18,Female,1,10.433,11.933,True,86.098,True,24.302
+KAC,8,KAC raised (3 cm),18,Female,2,25.367,6.867,True,104.346,False,13.107
+KAC,8,KAC raised (3 cm),18,Female,3,32.9,3.8,True,52.485,False,28.947
+KAC,8,KAC raised (3 cm),18,Female,4,47.6,13.8,True,104.496,False,24.155
+KAC,8,KAC raised (3 cm),18,Female,5,70.733,7.233,True,91.834,False,11.06
+KAC,8,KAC raised (3 cm),18,Female,6,82.967,7.433,True,94.179,False,11.211
+KAC,8,KAC raised (3 cm),18,Female,7,116.4,3.6,False,106.214,False,5.556
+KAC,8,KAC raised (3 cm),20,Female,1,96.1,23.9,False,105.619,True,1.813
+KAC,8,KAC raised (3 cm),21,Female,1,0.333,23.6,True,103.303,True,9.04
+KAC,8,KAC raised (3 cm),21,Female,2,24.033,15.3,True,93.742,True,4.793
+KAC,8,KAC raised (3 cm),21,Female,3,39.467,25.667,True,116.834,True,8.312
+KAC,8,KAC raised (3 cm),21,Female,4,65.233,5.6,True,56.824,True,32.738
+KAC,8,KAC raised (3 cm),22,Female,1,59.3,41.7,True,104.769,True,4.636
+KAC,8,KAC raised (3 cm),22,Female,2,101.167,16.5,True,104.36,True,4.646
+KAC,8,KAC raised (3 cm),23,Female,1,51.067,8.633,True,84.638,False,9.266
+KAC,8,KAC raised (3 cm),23,Female,2,79.467,19.367,True,101.439,False,12.392
+KAC,8,KAC raised (3 cm),24,Female,1,74.367,40.367,True,97.346,True,11.478
+KAC,8,KAC raised (3 cm),24,Female,2,115.1,2.0,True,20.695,False,100.0
+KAC,8,KAC raised (3 cm),24,Female,3,117.867,2.133,False,37.48,False,43.75
+KAC,8,KAC raised (3 cm),13,Male,1,75.333,27.767,True,98.028,True,11.405
+KAC,8,KAC raised (3 cm),25,Female,1,2.033,12.067,True,67.189,True,38.674
+KAC,8,KAC raised (3 cm),25,Female,2,19.967,4.6,True,79.07,False,18.116
+KAC,8,KAC raised (3 cm),25,Female,3,27.533,8.733,True,92.431,False,23.282
+KAC,8,KAC raised (3 cm),25,Female,4,40.733,16.967,True,93.684,True,13.163
+KAC,8,KAC raised (3 cm),25,Female,5,58.133,1.667,True,24.566,False,100.0
+KAC,8,KAC raised (3 cm),25,Female,6,61.6,8.733,True,96.697,False,12.977
+KAC,8,KAC raised (3 cm),25,Female,7,74.7,18.467,True,80.755,True,14.079
+KAC,8,KAC raised (3 cm),25,Female,8,100.567,9.433,True,93.11,True,11.307
+KAC,8,KAC raised (3 cm),27,Female,1,88.9,9.533,True,85.472,True,8.741
+KAC,8,KAC raised (3 cm),28,Female,1,8.267,5.4,True,73.808,True,15.432
+KAC,8,KAC raised (3 cm),28,Female,2,21.0,4.333,True,54.183,True,22.308
+KAC,8,KAC raised (3 cm),28,Female,3,27.033,15.0,True,104.152,True,6.0
+KAC,8,KAC raised (3 cm),28,Female,4,43.267,19.567,True,103.199,True,11.073
+KAC,8,KAC raised (3 cm),28,Female,5,63.333,4.267,True,72.286,False,23.438
+KAC,8,KAC raised (3 cm),28,Female,6,82.5,21.2,True,83.399,True,26.887
+KAC,8,KAC raised (3 cm),28,Female,7,103.9,3.233,True,49.102,False,34.021
+KAC,8,KAC raised (3 cm),28,Female,8,107.8,7.133,True,103.066,False,14.486
+KAC,8,KAC raised (3 cm),29,Female,1,0.7,3.667,True,37.673,True,54.545
+KAC,8,KAC raised (3 cm),30,Female,1,6.4,3.767,True,52.698,False,51.327
+KAC,8,KAC raised (3 cm),30,Female,2,25.567,4.533,True,77.827,False,16.176
+KAC,8,KAC raised (3 cm),30,Female,3,109.567,5.067,True,72.215,False,28.947
+KAC,8,KAC raised (3 cm),30,Female,4,114.733,5.267,False,88.393,False,13.291
+KAC,8,KAC raised (3 cm),31,Female,1,3.767,15.467,True,97.903,True,12.069
+KAC,8,KAC raised (3 cm),31,Female,2,25.133,19.367,True,103.062,True,6.54
+KAC,8,KAC raised (3 cm),31,Female,3,53.733,13.7,True,102.966,False,12.409
+KAC,8,KAC raised (3 cm),31,Female,4,67.567,9.867,True,101.772,False,19.257
+KAC,8,KAC raised (3 cm),31,Female,5,77.9,8.4,True,70.287,False,45.635
+KAC,8,KAC raised (3 cm),31,Female,6,87.033,13.9,True,99.389,False,9.113
+KAC,8,KAC raised (3 cm),31,Female,7,101.8,5.267,True,52.895,False,24.051
+KAC,8,KAC raised (3 cm),32,Female,1,6.633,14.133,True,97.387,True,13.679
+KAC,8,KAC raised (3 cm),32,Female,2,27.6,7.133,True,93.952,False,10.28
+KAC,8,KAC raised (3 cm),32,Female,3,35.367,11.133,True,101.55,True,8.982
+KAC,8,KAC raised (3 cm),32,Female,4,59.467,18.7,True,102.863,True,14.439
+KAC,8,KAC raised (3 cm),32,Female,5,98.933,5.767,True,104.896,False,10.405
+KAC,8,KAC raised (3 cm),3,Male,1,86.7,7.867,True,101.423,False,16.525
+KAC,8,KAC raised (3 cm),3,Male,2,95.767,9.733,True,66.125,False,51.027
+KAC,8,KAC raised (3 cm),17,Female,1,8.633,11.167,True,100.544,False,7.164
+KAC,8,KAC raised (3 cm),17,Female,2,26.633,2.8,True,45.558,False,27.381
+KAC,8,KAC raised (3 cm),17,Female,3,41.567,4.533,True,81.883,True,18.382
+KAC,8,KAC raised (3 cm),17,Female,4,46.767,11.133,True,103.726,False,16.168
+KAC,8,KAC raised (3 cm),17,Female,5,67.033,3.933,True,36.744,False,27.966
+KAC,8,KAC raised (3 cm),17,Female,6,71.567,6.6,True,106.119,False,14.141
+KAC,8,KAC raised (3 cm),17,Female,7,85.833,3.067,True,48.59,True,31.522
+KAC,8,KAC raised (3 cm),17,Female,8,102.6,9.467,True,100.33,False,8.451
+KAC,6,KAC standard (1.5 cm),4,Male,1,7.833,13.9,True,67.334,True,21.103
+KAC,6,KAC standard (1.5 cm),9,Male,1,0.7,3.767,True,35.981,False,55.752
+KAC,6,KAC standard (1.5 cm),13,Male,1,73.233,15.967,True,101.735,False,11.482
+KAC,6,KAC standard (1.5 cm),17,Female,1,30.9,28.433,True,103.584,True,9.965
+KAC,6,KAC standard (1.5 cm),17,Female,2,80.967,7.567,True,82.086,False,9.251
+KAC,6,KAC standard (1.5 cm),18,Female,1,14.3,3.033,True,38.689,False,43.956
+KAC,6,KAC standard (1.5 cm),18,Female,2,34.233,9.433,True,101.262,False,9.541
+KAC,6,KAC standard (1.5 cm),18,Female,3,57.0,20.833,True,99.088,True,3.2
+KAC,6,KAC standard (1.5 cm),21,Female,1,2.5,44.567,True,102.661,True,4.787
+KAC,6,KAC standard (1.5 cm),21,Female,2,47.867,48.0,True,102.344,True,11.111
+KAC,6,KAC standard (1.5 cm),22,Female,1,86.467,33.533,False,97.868,True,8.151
+KAC,6,KAC standard (1.5 cm),23,Female,1,99.3,2.8,True,37.063,False,47.619
+KAC,6,KAC standard (1.5 cm),23,Female,2,103.067,13.4,True,97.223,False,10.945
+KAC,6,KAC standard (1.5 cm),24,Female,1,15.9,28.3,True,100.961,True,14.488
+KAC,6,KAC standard (1.5 cm),25,Female,1,13.667,16.867,True,82.569,True,10.079
+KAC,6,KAC standard (1.5 cm),25,Female,2,41.4,46.333,True,103.319,True,15.18
+KAC,6,KAC standard (1.5 cm),25,Female,3,105.067,6.467,True,72.489,True,14.433
+KAC,6,KAC standard (1.5 cm),25,Female,4,111.7,3.567,True,52.802,False,30.841
+KAC,6,KAC standard (1.5 cm),26,Female,1,84.967,35.033,False,104.73,True,3.045
+KAC,6,KAC standard (1.5 cm),28,Female,1,56.467,8.167,True,86.509,False,11.02
+KAC,6,KAC standard (1.5 cm),28,Female,2,77.7,7.6,True,90.818,False,26.316
+KAC,6,KAC standard (1.5 cm),28,Female,3,98.367,9.867,True,90.634,False,9.122
+KAC,6,KAC standard (1.5 cm),28,Female,4,109.4,10.6,False,94.513,True,16.038
+KAC,6,KAC standard (1.5 cm),30,Female,1,26.733,18.7,True,99.95,False,6.595
+KAC,6,KAC standard (1.5 cm),30,Female,2,62.033,8.133,True,92.107,False,13.115
+KAC,6,KAC standard (1.5 cm),30,Female,3,79.367,7.3,True,81.997,True,27.854
+KAC,6,KAC standard (1.5 cm),30,Female,4,115.133,4.5,True,80.448,False,14.815
+KAC,6,KAC standard (1.5 cm),31,Female,1,28.467,46.3,True,102.133,True,5.472
+KAC,6,KAC standard (1.5 cm),31,Female,2,75.0,4.267,True,45.089,False,40.625
+KAC,6,KAC standard (1.5 cm),31,Female,3,100.267,6.067,True,101.464,False,15.934
+KAC,6,KAC standard (1.5 cm),31,Female,4,106.633,13.367,False,100.612,False,13.716
+KAC,6,KAC standard (1.5 cm),32,Female,1,58.367,17.5,True,101.764,False,4.381
+KAC,6,KAC standard (1.5 cm),32,Female,2,103.667,7.733,True,99.06,False,10.345
+SP1,6,SP1 raised,18,Female,1,13.9,81.6,True,109.536,False,5.882
+SP1,6,SP1 raised,19,Female,1,21.0,12.9,True,102.148,False,7.752
+SP1,6,SP1 raised,19,Female,2,39.3,8.2,True,106.758,False,9.756
+SP1,6,SP1 raised,19,Female,3,67.6,8.9,True,111.209,False,10.112
+SP1,6,SP1 raised,19,Female,4,93.6,5.5,True,78.903,False,16.364
+SP1,6,SP1 raised,19,Female,5,104.1,10.5,True,103.938,False,11.429
+SP1,6,SP1 raised,20,Female,1,7.6,13.2,True,94.791,False,8.333
+SP1,6,SP1 raised,20,Female,2,33.8,5.2,True,58.688,False,23.077
+SP1,6,SP1 raised,20,Female,3,62.7,14.0,True,104.83,False,5.0
+SP1,6,SP1 raised,21,Female,1,98.7,21.3,False,106.265,False,10.329
+SP1,6,SP1 raised,24,Female,1,32.0,2.5,True,31.198,False,68.0
+SP1,6,SP1 raised,24,Female,2,46.2,25.5,True,111.183,True,9.02
+SP1,6,SP1 raised,24,Female,3,72.5,2.3,True,32.671,False,60.87
+SP1,6,SP1 raised,24,Female,4,86.3,2.0,True,24.191,False,100.0
+SP1,6,SP1 raised,24,Female,5,97.1,16.6,True,104.94,False,6.627
+SP1,6,SP1 raised,12,Male,1,110.5,9.5,False,101.306,False,21.053
+SP1,6,SP1 raised,13,Male,1,102.1,8.3,True,78.121,False,15.663
+SP1,6,SP1 raised,26,Female,1,101.9,2.5,True,30.755,False,84.0
+SP1,6,SP1 raised,27,Female,1,20.4,22.1,True,111.08,False,9.502
+SP1,6,SP1 raised,27,Female,2,73.2,19.1,True,110.495,True,8.377
+SP1,6,SP1 raised,27,Female,3,107.4,3.5,True,37.095,False,31.429
+SP1,6,SP1 raised,28,Female,1,6.5,11.4,True,101.83,False,21.053
+SP1,6,SP1 raised,28,Female,2,54.3,36.0,True,109.17,False,19.722
+SP1,6,SP1 raised,28,Female,3,102.6,17.4,False,100.117,False,21.839
+SP1,6,SP1 raised,29,Female,1,40.5,36.0,True,109.12,False,16.389
+SP1,6,SP1 raised,29,Female,2,97.0,11.0,True,107.889,False,10.0
+SP1,6,SP1 raised,31,Female,1,17.6,35.9,True,110.532,True,6.685
+SP1,6,SP1 raised,31,Female,2,74.3,25.6,True,94.609,False,9.766
+SP1,6,SP1 raised,32,Female,1,76.6,18.6,True,106.549,False,6.989
+SP1,6,SP1 raised,32,Female,2,110.0,10.0,False,94.145,False,4.0
+SP1,6,SP1 raised,4,Male,1,102.5,9.3,True,96.185,False,25.806
+SP1,6,SP1 raised,7,Male,1,117.0,3.0,False,52.802,True,3.333
+SP1,6,SP1 raised,17,Female,1,40.5,10.5,True,89.466,False,16.19
+SP1,6,SP1 raised,17,Female,2,95.3,10.2,True,88.894,False,11.765
